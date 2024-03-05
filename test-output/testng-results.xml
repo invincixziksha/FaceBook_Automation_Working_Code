@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="19" passed="19" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-05T14:39:59 IST" name="Suite" finished-at="2024-03-05T14:40:10 IST" duration-ms="11134">
+    <groups>
+      <group name="sanity">
+        <method signature="FaceBook_L2_AutomationTest.validateFacebookHomePage()[pri:1, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="validateFacebookHomePage" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.validateProfileName()[pri:2, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="validateProfileName" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.uploadProfilePicture()[pri:3, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="uploadProfilePicture" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.uploadCoverPhoto()[pri:4, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="uploadCoverPhoto" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.clickOnEditProfileAddDetailsInBioSections()[pri:5, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="clickOnEditProfileAddDetailsInBioSections" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.clicOnPostGoToIntoAddDetailsInAddBio()[pri:6, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="clicOnPostGoToIntoAddDetailsInAddBio" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.clicOnPostGoToIntoClickOnEditDetailsAddWorkPlace()[pri:7, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="clicOnPostGoToIntoClickOnEditDetailsAddWorkPlace" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.clicOnPostGoToIntoClickOnEditFeaturedAddOneFeaturedPhotos()[pri:7, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="clicOnPostGoToIntoClickOnEditFeaturedAddOneFeaturedPhotos" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.gotoAboutClickOnOverviewAddWorkplace()[pri:8, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="gotoAboutClickOnOverviewAddWorkplace" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.gotoAboutClickOnOverviewAddSecondaryHighSchool()[pri:9, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="gotoAboutClickOnOverviewAddSecondaryHighSchool" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.gotoAboutClickOnOverviewAddUniversity()[pri:10, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="gotoAboutClickOnOverviewAddUniversity" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.gotoAboutClickOnOverviewAddCurrentCity()[pri:11, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="gotoAboutClickOnOverviewAddCurrentCity" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.gotoAboutClickOnOverviewAddHomeTown()[pri:12, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="gotoAboutClickOnOverviewAddHomeTown" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.gotoAboutClickOnOverviewAddRelationShipStatus()[pri:13, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="gotoAboutClickOnOverviewAddRelationShipStatus" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.gotoAboutClickOnOverviewEditPhoneNumber()[pri:14, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="gotoAboutClickOnOverviewEditPhoneNumber" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.go_to_notification()[pri:15, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="go_to_notification" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.go_to_marketPlace()[pri:17, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="go_to_marketPlace" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.like_any_post()[pri:18, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="like_any_post" class="testcases.FaceBook_L2_AutomationTest"/>
+        <method signature="FaceBook_L2_AutomationTest.click_on_events()[pri:19, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" name="click_on_events" class="testcases.FaceBook_L2_AutomationTest"/>
+      </group> <!-- sanity -->
+    </groups>
+    <test started-at="2024-03-05T14:39:59 IST" name="Test" finished-at="2024-03-05T14:40:10 IST" duration-ms="11134">
+      <class name="testcases.FaceBook_L2_AutomationTest">
+        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:39:59 IST" name="initBrowser" finished-at="2024-03-05T14:40:09 IST" duration-ms="10476" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowser -->
+        <test-method signature="validateFacebookHomePage()[pri:1, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="validateFacebookHomePage" description="after Logged In, Validate the title of Facebook Home Page " finished-at="2024-03-05T14:40:10 IST" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateFacebookHomePage -->
+        <test-method signature="validateProfileName()[pri:2, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="validateProfileName" description="ClickOn Profile Icon and Validate the Profile Name " finished-at="2024-03-05T14:40:10 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProfileName -->
+        <test-method signature="uploadProfilePicture()[pri:3, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="uploadProfilePicture" description="ClickOn Profile Name and upload the profile Picture " finished-at="2024-03-05T14:40:10 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadProfilePicture -->
+        <test-method signature="uploadCoverPhoto()[pri:4, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="uploadCoverPhoto" description="clickOn Add Cover Photo and Upload a cover photo" finished-at="2024-03-05T14:40:10 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadCoverPhoto -->
+        <test-method signature="clickOnEditProfileAddDetailsInBioSections()[pri:5, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="clickOnEditProfileAddDetailsInBioSections" description="click On Edit Profile And fill The Detail In Bio Section" finished-at="2024-03-05T14:40:10 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnEditProfileAddDetailsInBioSections -->
+        <test-method signature="clicOnPostGoToIntoAddDetailsInAddBio()[pri:6, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="clicOnPostGoToIntoAddDetailsInAddBio" description="click On Posts and Go Into and Add Details In Add Bio" finished-at="2024-03-05T14:40:10 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clicOnPostGoToIntoAddDetailsInAddBio -->
+        <test-method signature="clicOnPostGoToIntoClickOnEditDetailsAddWorkPlace()[pri:7, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="clicOnPostGoToIntoClickOnEditDetailsAddWorkPlace" description="click On Posts and Go Into and Click On Edit Details Add WorkPlace" finished-at="2024-03-05T14:40:10 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clicOnPostGoToIntoClickOnEditDetailsAddWorkPlace -->
+        <test-method signature="clicOnPostGoToIntoClickOnEditFeaturedAddOneFeaturedPhotos()[pri:7, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="clicOnPostGoToIntoClickOnEditFeaturedAddOneFeaturedPhotos" description="click On Posts and GoTo Click On Edit Featured and Add One Featured Photos" finished-at="2024-03-05T14:40:10 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clicOnPostGoToIntoClickOnEditFeaturedAddOneFeaturedPhotos -->
+        <test-method signature="gotoAboutClickOnOverviewAddWorkplace()[pri:8, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="gotoAboutClickOnOverviewAddWorkplace" description="go to About Click On Overview Add Workplace" finished-at="2024-03-05T14:40:10 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gotoAboutClickOnOverviewAddWorkplace -->
+        <test-method signature="gotoAboutClickOnOverviewAddSecondaryHighSchool()[pri:9, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="gotoAboutClickOnOverviewAddSecondaryHighSchool" description="go to About and Click On Overview and Add Secondary High School" finished-at="2024-03-05T14:40:10 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gotoAboutClickOnOverviewAddSecondaryHighSchool -->
+        <test-method signature="gotoAboutClickOnOverviewAddUniversity()[pri:10, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="gotoAboutClickOnOverviewAddUniversity" description="go to About and Click On Over view and Add University" finished-at="2024-03-05T14:40:10 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gotoAboutClickOnOverviewAddUniversity -->
+        <test-method signature="gotoAboutClickOnOverviewAddCurrentCity()[pri:11, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="gotoAboutClickOnOverviewAddCurrentCity" description="go to About and Click On Overview and Add Current City" finished-at="2024-03-05T14:40:10 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gotoAboutClickOnOverviewAddCurrentCity -->
+        <test-method signature="gotoAboutClickOnOverviewAddHomeTown()[pri:12, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="gotoAboutClickOnOverviewAddHomeTown" description="go to About and Click On Overview and Add HomeTown" finished-at="2024-03-05T14:40:10 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gotoAboutClickOnOverviewAddHomeTown -->
+        <test-method signature="gotoAboutClickOnOverviewAddRelationShipStatus()[pri:13, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="gotoAboutClickOnOverviewAddRelationShipStatus" description="go to About and Click On Overview and Add RelationShip Status" finished-at="2024-03-05T14:40:10 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gotoAboutClickOnOverviewAddRelationShipStatus -->
+        <test-method signature="gotoAboutClickOnOverviewEditPhoneNumber()[pri:14, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="gotoAboutClickOnOverviewEditPhoneNumber" description="go to About Click On Overview and Edit PhoneNumber" finished-at="2024-03-05T14:40:10 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gotoAboutClickOnOverviewEditPhoneNumber -->
+        <test-method signature="go_to_notification()[pri:15, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="go_to_notification" description="after log in Check notifications and mark them as read " finished-at="2024-03-05T14:40:10 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- go_to_notification -->
+        <test-method signature="go_to_marketPlace()[pri:17, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="go_to_marketPlace" description=" Navigate to the marketplace and search for a specific item " finished-at="2024-03-05T14:40:10 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- go_to_marketPlace -->
+        <test-method signature="like_any_post()[pri:18, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="like_any_post" description=" Like a post " finished-at="2024-03-05T14:40:10 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- like_any_post -->
+        <test-method signature="click_on_events()[pri:19, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="click_on_events" description="after logged in, click on events and click on classic." finished-at="2024-03-05T14:40:10 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_on_events -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.FaceBook_L2_AutomationTest@60b4beb4]" started-at="2024-03-05T14:40:10 IST" name="tearDown" finished-at="2024-03-05T14:40:10 IST" duration-ms="324" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcases.FaceBook_L2_AutomationTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>19/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Mar 05 14:39:59 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>11 seconds (11134 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>sanity </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.click_on_events()'><b>click_on_events</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: after logged in, click on events and click on classic.</td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.uploadProfilePicture()'><b>uploadProfilePicture</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: ClickOn Profile Name and upload the profile Picture </td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.like_any_post()'><b>like_any_post</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method:  Like a post </td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.validateFacebookHomePage()'><b>validateFacebookHomePage</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: after Logged In, Validate the title of Facebook Home Page </td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.gotoAboutClickOnOverviewEditPhoneNumber()'><b>gotoAboutClickOnOverviewEditPhoneNumber</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: go to About Click On Overview and Edit PhoneNumber</td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.clicOnPostGoToIntoClickOnEditDetailsAddWorkPlace()'><b>clicOnPostGoToIntoClickOnEditDetailsAddWorkPlace</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: click On Posts and Go Into and Click On Edit Details Add WorkPlace</td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.uploadCoverPhoto()'><b>uploadCoverPhoto</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: clickOn Add Cover Photo and Upload a cover photo</td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.gotoAboutClickOnOverviewAddSecondaryHighSchool()'><b>gotoAboutClickOnOverviewAddSecondaryHighSchool</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: go to About and Click On Overview and Add Secondary High School</td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.clicOnPostGoToIntoClickOnEditFeaturedAddOneFeaturedPhotos()'><b>clicOnPostGoToIntoClickOnEditFeaturedAddOneFeaturedPhotos</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: click On Posts and GoTo Click On Edit Featured and Add One Featured Photos</td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.gotoAboutClickOnOverviewAddUniversity()'><b>gotoAboutClickOnOverviewAddUniversity</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: go to About and Click On Over view and Add University</td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.gotoAboutClickOnOverviewAddWorkplace()'><b>gotoAboutClickOnOverviewAddWorkplace</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: go to About Click On Overview Add Workplace</td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.gotoAboutClickOnOverviewAddHomeTown()'><b>gotoAboutClickOnOverviewAddHomeTown</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: go to About and Click On Overview and Add HomeTown</td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.gotoAboutClickOnOverviewAddCurrentCity()'><b>gotoAboutClickOnOverviewAddCurrentCity</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: go to About and Click On Overview and Add Current City</td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.gotoAboutClickOnOverviewAddRelationShipStatus()'><b>gotoAboutClickOnOverviewAddRelationShipStatus</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: go to About and Click On Overview and Add RelationShip Status</td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.clickOnEditProfileAddDetailsInBioSections()'><b>clickOnEditProfileAddDetailsInBioSections</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: click On Edit Profile And fill The Detail In Bio Section</td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.go_to_notification()'><b>go_to_notification</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: after log in Check notifications and mark them as read </td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.validateProfileName()'><b>validateProfileName</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: ClickOn Profile Icon and Validate the Profile Name </td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.go_to_marketPlace()'><b>go_to_marketPlace</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method:  Navigate to the marketplace and search for a specific item </td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+<tr>
+<td title='testcases.FaceBook_L2_AutomationTest.clicOnPostGoToIntoAddDetailsInAddBio()'><b>clicOnPostGoToIntoAddDetailsInAddBio</b><br>Test class: testcases.FaceBook_L2_AutomationTest<br>Test method: click On Posts and Go Into and Add Details In Add Bio</td>
+<td></td>
+<td>0</td>
+<td>testcases.FaceBook_L2_AutomationTest@60b4beb4</td></tr>
+</table><p>
+</body>
+</html>

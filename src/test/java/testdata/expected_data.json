@@ -6,9 +6,9 @@
 		"pageTitle":"Facebook – log in or sign up"
 	},
 	
-		"userdetails":{
-			"firstName":"abhisek",
-			"lastName":"mohanta"
+	"logInCredential":{
+		"emailAddsPhoneNumber":"9124564060",
+		"password":"Surya@123456"
 	},
 	"Incorrect_password":{
 		"incorrect_password_meassge":"The password that you've entered is incorrect."
@@ -44,6 +44,9 @@
 	},
 	"username_field":{
 		"username_field_Title":"Email address or phone number"
+	},
+	"errorMessage":{
+		"errorMessageText":"The email address or mobile number you entered isn't connected to an account. Find your account and log in.Find your account and log in."
 	}
 }
 

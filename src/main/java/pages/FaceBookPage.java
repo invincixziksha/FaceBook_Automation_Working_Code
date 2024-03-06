@@ -1,147 +1,114 @@
 package pages;
 
+import java.util.Map;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
 public class FaceBookPage extends StartupPage {
+	//please write all the locators for facebook page only 
 
+	By loginButton = By.xpath("//button[@name='login']"); 
+	By EmailAddsPhoneNumberTextbox = By.xpath("//input[@placeholder='Email address or phone number']"); 
+	By passwordTextbox = By.xpath("//input[@placeholder='Password']"); 
+	By profileIconImage = By.xpath("(//div//div//span)[14]"); 
+	By logoutButton = By.xpath("//span[contains(text (), 'Log out')]"); 
+	By forgettenPasswordLink = By.xpath("//a[.='Forgotten password?']"); 
+	By createNewAccountLink = By.xpath("//a[contains(text() , 'Create new account')]"); 
+	By emailTextField = By.id("email"); 
+	By errorMessage1 = By.xpath("//div[@id='email_container']//div[2]"); 
+	By errorMessage2 = By.xpath("//div[@id='email_container']//div[2]/a"); 
+	 
+	 
+	 
+	 
+	 
 	public FaceBookPage(WebDriver driver) {
 		super(driver);
+		PageFactory.initElements(driver, this); // Initialize Page Factory
 		// TODO Auto-generated constructor stub
 	}
 	
-	//Expected data will be fetch from config.json file,path of the json file is:FaceBook_Automation_Dummy/src/main/resources/config.json
-
-	public String validateTheLoginPage() 
-	{
-		
-		return null;
-	}
-	public String validatePresenceOfAllFieldInTheLoginPage() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public String Validate_Incorrect_username() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public String Validate_Incorrect_Password() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public String username_password() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public String titleoftheloginpage() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public FaceBookPage loginbutton_is_present_clickable() {
+	
+	/**
+	 * about this method validateFacebookTitleOfLoginPage() 
+	 * @param : null
+	 * @description : it is getting the page title and return the same,
+	 * @return : title of string type
+	 * @author : Yaksha
+	 */
+	public String validateFacebookTitleOfLoginPage() throws Exception {
 		try {
-			// TODO Auto-generated method stub
+			
+		String currentPageTitle	=  driver.getTitle();
+		System.out.println("Title of the Login Page : " + currentPageTitle );
+		return currentPageTitle;
 		}catch(Exception e) {
 			throw e;
 		}
-		return new FaceBookPage(driver);		
 	}
 	
-	public String Click_on_forgot_password() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	public FaceBookPage Click_on_Create_new_account()
-	{
+	/**
+	 * about this method facebookLoginForm() 
+	 * @param : Map<String, String> expectedData
+	 * @description : it is fill the forms and click on  login button  ,
+	 * @return : null
+	 * @author : Yaksha
+	 */
+	public FaceBookPage facebookLoginForm(Map<String, String> expectedData) throws Exception {
 		try {
-			// TODO Auto-generated method stub
-		}catch(Exception e) {
-			throw e;
-		}
-		return new FaceBookPage(driver);	
-	}
-	public String navigate_to_the_signUp_page() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	public String enter_firstName_surname() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public String enter_MobileNumber() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	public FaceBookPage select_different_DOB_fields() {
-		try {
-			// TODO Auto-generated method stub
-		}catch(Exception e) {
-			throw e;
-		}
-		return new FaceBookPage(driver);	
-	}
-	
-	public FaceBookPage verify_dates_are_selectable() {
-		try {
-			// TODO Auto-generated method stub
-		}catch(Exception e) {
-			throw e;
-		}
-		return new FaceBookPage(driver);	
-	}
-	
-	public String verify_captured_DOB_values() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	public FaceBookPage select_radio_buttons() {
-		try {
-			// TODO Auto-generated method stub
-		}catch(Exception e) {
-			throw e;
-		}
-		return new FaceBookPage(driver);	
-	}
-	public FaceBookPage Validate_only_one_radio_button_should_be_selectable() {
-		try {
-			// TODO Auto-generated method stub
+			commonEvents.sendKeys(EmailAddsPhoneNumberTextbox,expectedData.get("emailAddsPhoneNumber"));	
+			commonEvents.sendKeys(passwordTextbox,expectedData.get("password"));
+			commonEvents.click(loginButton);
+			Thread.sleep(5000);
+			commonEvents.click(profileIconImage);
+			
 		}catch(Exception e) {
 			throw e;
 		}
 		return new FaceBookPage(driver);
 	}
 	
-	public FaceBookPage navigate_to_Terms_page() {
+	/**
+	 * about this method verifyPresenceOfALlFields() 
+	 * @param : null
+	 * @description : it is verify all fields is present or not 
+	 * @return : true
+	 * @author : Yaksha
+	 */
+	public Boolean verifyPresenceOfALlFields() throws Exception {
 		try {
-			// TODO Auto-generated method stub
+			if(commonEvents.isDisplayed(EmailAddsPhoneNumberTextbox)&&
+			commonEvents.isDisplayed(passwordTextbox)&&
+			commonEvents.isDisplayed(forgettenPasswordLink)&&
+			commonEvents.isDisplayed(createNewAccountLink)) {
+			return true;
+			}	
+		}catch(Exception e) {
+			throw e;	
+		}
+		return false;
+		
+	}
+	
+	/**
+	 * about this method validateErrorMessage() 
+	 * @param : null
+	 * @description : get the error message and validate the error message ,
+	 * @return : title of string type
+	 * @author : Yaksha
+	 */
+	public String validateErrorMessage() throws Exception {
+		try {
+			commonEvents.click(loginButton);
+			commonEvents.waitTillElementLocated(emailTextField, 60);
+			String ErrorMessageValue =  commonEvents.getText(errorMessage1) + commonEvents.getText(errorMessage2);
+			
+			return ErrorMessageValue ;
+			
 		}catch(Exception e) {
 			throw e;
 		}
-		return new FaceBookPage(driver);	
 	}
-	public FaceBookPage navigate_to_Data_Policy() {
-		try {
-			// TODO Auto-generated method stub
-		}catch(Exception e) {
-			throw e;
-		}
-		return new FaceBookPage(driver);	
-	}
-	
-	public FaceBookPage clicking_on_sign_up() {
-		try {
-			// TODO Auto-generated method stub
-		}catch(Exception e) {
-			throw e;
-		}
-		return new FaceBookPage(driver);	
-	}
-	
-	public String validate_the_error_message() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
 }

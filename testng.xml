@@ -15,7 +15,7 @@
 		<parameter name="browser" value="chrome" />
 		<parameter name="environment" value="dev" />
 		<classes>
-			<class name="testcases.FaceBook_L2_AutomationTest" />
+			<class name="testcases.Facebook_L1_AutomationTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

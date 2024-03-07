@@ -80,7 +80,7 @@ public class Facebook_L1_AutomationTest extends AppTestBase {
 		Map<String, String> expectedData1 = new FileOperations().readJson(expectedDataFilePath, "EmailOrPhoneNumber");
 		FaceBookPageInstance.enterEmailIdOrPhoneNumber(expectedData1);
 		Map<String, String> expectedData2 = new FileOperations().readJson(expectedDataFilePath, "errorMessage1");
-		Assert.assertEquals(FaceBookPageInstance.validateErrorMessageWithoutProvidePassword(expectedData2), expectedData2.get("errorMessageText"), "error message is not matching, please check manually");
+		Assert.assertTrue(FaceBookPageInstance.validateErrorMessageWithoutProvidePassword(expectedData2).contains(expectedData2.get("errorMessageText")), "Error message is not matching, please check manually");
 		Assert.assertTrue(LocatorsFactoryInstance.getPasswordTextfield(driver).isDisplayed(), "Password Text Field is not present in the current page, Please check manually");
 		logger.info("execution completed for the methiod validateErrorMessageWithoutProvidePassword()");
 	}

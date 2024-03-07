@@ -15,6 +15,12 @@ public class LocatorsFactory extends StartupPage {
 	By forgettenPasswordLink = By.xpath("//a[.='Forgotten password?']"); 
 	By createNewAccountLink = By.xpath("//a[contains(text() , 'Create new account')]"); 
 	By emailTextField = By.id("email"); 
+	By FacebookPageTitle = By.xpath("//title[@id='pageTitle']");
+	By createNewAccount = By.xpath("//a[contains(text() , 'Create new account')]"); 
+	
+	By SignUpButton = By.xpath("//button[@name=\"websubmit\"]"); 
+	By FirstNameTextField = By.xpath("//input[@name=\"firstname\"]"); 
+	By newPassword = By.xpath("(//input[@type=\"password\"])[2]");
 	
 
 	 
@@ -41,8 +47,8 @@ public class LocatorsFactory extends StartupPage {
     }
 	
 	public WebElement getPasswordTextfield(WebDriver driver) {
-		WebElement EmailAddsPhoneNumberWebElement = driver.findElement(passwordTextbox);
-        return EmailAddsPhoneNumberWebElement;
+		WebElement passwordWebElement = driver.findElement(passwordTextbox);
+        return passwordWebElement;
     }
 	
 	public WebElement getLogOutButton(WebDriver driver) {
@@ -61,8 +67,32 @@ public class LocatorsFactory extends StartupPage {
     }
 	
 	public WebElement emailTextField(WebDriver driver) {
-		WebElement createNewAccountLinkWebElement = driver.findElement(emailTextField);
-        return createNewAccountLinkWebElement;
+		WebElement emailTextFieldWebElement = driver.findElement(emailTextField);
+        return emailTextFieldWebElement;
+    }
+	
+	public WebElement getFacebookPageTitle(WebDriver driver) {
+		WebElement FacebookPageTitleWebElement = driver.findElement(FacebookPageTitle);
+        return FacebookPageTitleWebElement;
+    }
+	
+	public WebElement getCreateNewAccount(WebDriver driver) {
+		WebElement CreateNewAccountWebElement = driver.findElement(createNewAccount);
+        return CreateNewAccountWebElement;
+    }
+	
+	public WebElement signUpButton(WebDriver driver) {
+		WebElement SignUpButtonWebElement = driver.findElement(SignUpButton);
+        return SignUpButtonWebElement;
+    }
+	public WebElement firstNameTextField(WebDriver driver) {
+		WebElement firstNameTextFieldWebElement = driver.findElement(FirstNameTextField);
+        return firstNameTextFieldWebElement;
+    }
+	
+	public WebElement newpasswordTextField(WebDriver driver) {
+		WebElement newPasswordWebElement = driver.findElement(newPassword);
+        return newPasswordWebElement;
     }
 	
 }

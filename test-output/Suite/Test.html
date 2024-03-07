@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Mar 06 22:36:43 IST 2024</td>
+<td>Started on:</td><td>Thu Mar 07 11:18:47 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>19 seconds (19203 ms)</td>
+<tr><td>Total time:</td><td>24 seconds (24459 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>sanity </td>
 </tr><tr>
@@ -67,6 +67,50 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.Facebook_L1_AutomationTest.validateErrorMessageWithoutProvidePassword()'><b>validateErrorMessageWithoutProvidePassword</b><br>Test class: testcases.Facebook_L1_AutomationTest<br>Test method: Enter Email or Phone No in Email or Phone No Text field and click on Login and validate Error Message</td>
+<td><div><pre>java.lang.AssertionError: error message is not matching, please check manually expected [The password that you&apos;ve entered is incorrect. Forgotten password?] but found [The password that you&apos;ve entered is incorrect.
+Forgotten password?]
+	at testcases.Facebook_L1_AutomationTest.validateErrorMessageWithoutProvidePassword(Facebook_L1_AutomationTest.java:83)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace205916051", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace205916051'><pre>java.lang.AssertionError: error message is not matching, please check manually expected [The password that you&apos;ve entered is incorrect. Forgotten password?] but found [The password that you&apos;ve entered is incorrect.
+Forgotten password?]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at testcases.Facebook_L1_AutomationTest.validateErrorMessageWithoutProvidePassword(Facebook_L1_AutomationTest.java:83)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>8</td>
+<td>testcases.Facebook_L1_AutomationTest@79c5636f</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,20 +120,50 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.Facebook_L1_AutomationTest.verifyPresenceOfAllFieldsinTheLoginPage()'><b>verifyPresenceOfAllFieldsinTheLoginPage</b><br>Test class: testcases.Facebook_L1_AutomationTest<br>Test method: verify Presence Of All Fields in The Login Page</td>
-<td></td>
-<td>0</td>
-<td>testcases.Facebook_L1_AutomationTest@5eefa415</td></tr>
-<tr>
 <td title='testcases.Facebook_L1_AutomationTest.validateFacebookTitleofLoginPage()'><b>validateFacebookTitleofLoginPage</b><br>Test class: testcases.Facebook_L1_AutomationTest<br>Test method: Navigate to the URL and Validate the fa LogIn Page Title</td>
 <td></td>
 <td>0</td>
-<td>testcases.Facebook_L1_AutomationTest@5eefa415</td></tr>
+<td>testcases.Facebook_L1_AutomationTest@79c5636f</td></tr>
 <tr>
-<td title='testcases.Facebook_L1_AutomationTest.validateErrorMessageWIthoutProvideAnyCredentials()'><b>validateErrorMessageWIthoutProvideAnyCredentials</b><br>Test class: testcases.Facebook_L1_AutomationTest<br>Test method: validate the error message, when user does not provide any credentials</td>
+<td title='testcases.Facebook_L1_AutomationTest.Enter_data_in_some_Filed_in_the_SignUp_page()'><b>Enter_data_in_some_Filed_in_the_SignUp_page</b><br>Test class: testcases.Facebook_L1_AutomationTest<br>Test method: Enter data (Read the data from Json File)in the surname,Mobile Number email address,New password field.</td>
+<td></td>
+<td>0</td>
+<td>testcases.Facebook_L1_AutomationTest@79c5636f</td></tr>
+<tr>
+<td title='testcases.Facebook_L1_AutomationTest.validateErrorMessageWithoutProvideEmailOrPhoneNumber()'><b>validateErrorMessageWithoutProvideEmailOrPhoneNumber</b><br>Test class: testcases.Facebook_L1_AutomationTest<br>Test method: Enter Password in password Text field and click on Login and validate Error Message</td>
+<td></td>
+<td>1</td>
+<td>testcases.Facebook_L1_AutomationTest@79c5636f</td></tr>
+<tr>
+<td title='testcases.Facebook_L1_AutomationTest.validateErrorMessageWithoutProvideAnyCredentials()'><b>validateErrorMessageWithoutProvideAnyCredentials</b><br>Test class: testcases.Facebook_L1_AutomationTest<br>Test method: validate the error message, when user does not provide any credentials</td>
+<td></td>
+<td>1</td>
+<td>testcases.Facebook_L1_AutomationTest@79c5636f</td></tr>
+<tr>
+<td title='testcases.Facebook_L1_AutomationTest.click_on_forgetten_account_link_then_validate_Email_adddress_Or_phone_number_field()'><b>click_on_forgetten_account_link_then_validate_Email_adddress_Or_phone_number_field</b><br>Test class: testcases.Facebook_L1_AutomationTest<br>Test method: Click on Create Account Button and Verify nevigate to the signUp page.</td>
+<td></td>
+<td>0</td>
+<td>testcases.Facebook_L1_AutomationTest@79c5636f</td></tr>
+<tr>
+<td title='testcases.Facebook_L1_AutomationTest.Enter_data_in_the_first_name_field_()'><b>Enter_data_in_the_first_name_field_</b><br>Test class: testcases.Facebook_L1_AutomationTest<br>Test method: Enter data in the first name field</td>
+<td></td>
+<td>0</td>
+<td>testcases.Facebook_L1_AutomationTest@79c5636f</td></tr>
+<tr>
+<td title='testcases.Facebook_L1_AutomationTest.VerifyAllFieldsArePresentInTheSignUpPage()'><b>VerifyAllFieldsArePresentInTheSignUpPage</b><br>Test class: testcases.Facebook_L1_AutomationTest<br>Test method: verify first name,surname,Mobile Number email address,New password field are present in the signup page.</td>
+<td></td>
+<td>0</td>
+<td>testcases.Facebook_L1_AutomationTest@79c5636f</td></tr>
+<tr>
+<td title='testcases.Facebook_L1_AutomationTest.verifyPresenceOfAllFieldsinTheLoginPage()'><b>verifyPresenceOfAllFieldsinTheLoginPage</b><br>Test class: testcases.Facebook_L1_AutomationTest<br>Test method: verify Presence Of All Fields in The Login Page</td>
+<td></td>
+<td>0</td>
+<td>testcases.Facebook_L1_AutomationTest@79c5636f</td></tr>
+<tr>
+<td title='testcases.Facebook_L1_AutomationTest.goBackToLogInPageAndValidateCreateNewAccountButtonIsPresentOrNot()'><b>goBackToLogInPageAndValidateCreateNewAccountButtonIsPresentOrNot</b><br>Test class: testcases.Facebook_L1_AutomationTest<br>Test method: Go Back To LogIn Page And Validate CreateNewAccount button Is Present or not</td>
 <td></td>
 <td>5</td>
-<td>testcases.Facebook_L1_AutomationTest@5eefa415</td></tr>
+<td>testcases.Facebook_L1_AutomationTest@79c5636f</td></tr>
 </table><p>
 </body>
 </html>

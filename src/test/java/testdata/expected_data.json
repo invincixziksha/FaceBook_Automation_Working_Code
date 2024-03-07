@@ -8,7 +8,18 @@
 	
 	"logInCredential":{
 		"emailAddsPhoneNumber":"9124564060",
-		"password":"Surya@123456"
+		"password":"Surya@123456",
+		"FirstName":"Abhisek",
+		"surname":"mohanta",
+		"mobileNumberandpassword":"Abhi@12345",
+		"newPassword":"678965678"
+	},
+
+	"EmailOrPhoneNumber":{
+		"emailAddsPhoneNumber":"9124564060"
+	},
+	"password":{
+		"password":"abcde@12345"
 	},
 	"Incorrect_password":{
 		"incorrect_password_meassge":"The password that you've entered is incorrect."
@@ -47,6 +58,9 @@
 	},
 	"errorMessage":{
 		"errorMessageText":"The email address or mobile number you entered isn't connected to an account. Find your account and log in.Find your account and log in."
+	},
+	"errorMessage1":{
+		"errorMessageText":"The password that you've entered is incorrect. Forgotten password?"
 	}
 }
 

@@ -1392,6 +1392,7 @@ public class CommonEvents
 	 */
 	public CommonEvents sendKeys(By by, String textToBeEntered)
 	{
+		this.clear(by);
 		getWebElement(by).sendKeys(textToBeEntered);
 		return new CommonEvents(driver);
 	}

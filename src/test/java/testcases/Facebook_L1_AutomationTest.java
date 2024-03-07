@@ -14,9 +14,9 @@ import org.testng.annotations.Test;
 import coreUtilities.testutils.ApiHelper;
 import coreUtilities.utils.FileOperations;
 import pages.FaceBookPage;
-import pages.LocatorsFactory;
 import pages.StartupPage;
 import testBase.AppTestBase;
+import testdata.LocatorsFactory;
 
 public class Facebook_L1_AutomationTest extends AppTestBase {
 	

@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-07T11:18:47 IST" name="Suite" finished-at="2024-03-07T11:19:11 IST" duration-ms="24459">
+  <suite started-at="2024-03-07T12:19:34 IST" name="Suite" finished-at="2024-03-07T12:20:00 IST" duration-ms="26137">
     <groups>
       <group name="sanity">
         <method signature="Facebook_L1_AutomationTest.validateFacebookTitleofLoginPage()[pri:1, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" name="validateFacebookTitleofLoginPage" class="testcases.Facebook_L1_AutomationTest"/>
@@ -17,9 +17,9 @@
         <method signature="Facebook_L1_AutomationTest.Enter_data_in_some_Filed_in_the_SignUp_page()[pri:10, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" name="Enter_data_in_some_Filed_in_the_SignUp_page" class="testcases.Facebook_L1_AutomationTest"/>
       </group> <!-- sanity -->
     </groups>
-    <test started-at="2024-03-07T11:18:47 IST" name="Test" finished-at="2024-03-07T11:19:11 IST" duration-ms="24459">
+    <test started-at="2024-03-07T12:19:34 IST" name="Test" finished-at="2024-03-07T12:20:00 IST" duration-ms="26137">
       <class name="testcases.Facebook_L1_AutomationTest">
-        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T11:18:47 IST" name="initBrowser" finished-at="2024-03-07T11:18:52 IST" duration-ms="4541" status="PASS">
+        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T12:19:34 IST" name="initBrowser" finished-at="2024-03-07T12:19:39 IST" duration-ms="5203" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,26 +35,28 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method signature="validateFacebookTitleofLoginPage()[pri:1, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T11:18:52 IST" name="validateFacebookTitleofLoginPage" description="Navigate to the URL and Validate the fa LogIn Page Title" finished-at="2024-03-07T11:18:52 IST" duration-ms="92" status="PASS">
+        <test-method signature="validateFacebookTitleofLoginPage()[pri:1, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T12:19:39 IST" name="validateFacebookTitleofLoginPage" description="Navigate to the URL and Validate the fa LogIn Page Title" finished-at="2024-03-07T12:19:39 IST" duration-ms="87" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateFacebookTitleofLoginPage -->
-        <test-method signature="verifyPresenceOfAllFieldsinTheLoginPage()[pri:2, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T11:18:52 IST" name="verifyPresenceOfAllFieldsinTheLoginPage" description="verify Presence Of All Fields in The Login Page" finished-at="2024-03-07T11:18:52 IST" duration-ms="385" status="PASS">
+        <test-method signature="verifyPresenceOfAllFieldsinTheLoginPage()[pri:2, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T12:19:40 IST" name="verifyPresenceOfAllFieldsinTheLoginPage" description="verify Presence Of All Fields in The Login Page" finished-at="2024-03-07T12:19:40 IST" duration-ms="269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPresenceOfAllFieldsinTheLoginPage -->
-        <test-method signature="validateErrorMessageWithoutProvideAnyCredentials()[pri:3, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T11:18:52 IST" name="validateErrorMessageWithoutProvideAnyCredentials" description="validate the error message, when user does not provide any credentials" finished-at="2024-03-07T11:18:54 IST" duration-ms="1532" status="PASS">
+        <test-method signature="validateErrorMessageWithoutProvideAnyCredentials()[pri:3, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T12:19:40 IST" name="validateErrorMessageWithoutProvideAnyCredentials" description="validate the error message, when user does not provide any credentials" finished-at="2024-03-07T12:19:41 IST" duration-ms="1655" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateErrorMessageWithoutProvideAnyCredentials -->
-        <test-method signature="validateErrorMessageWithoutProvidePassword()[pri:4, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T11:18:54 IST" name="validateErrorMessageWithoutProvidePassword" description="Enter Email or Phone No in Email or Phone No Text field and click on Login and validate Error Message" finished-at="2024-03-07T11:19:02 IST" duration-ms="8741" status="FAIL">
+        <test-method signature="validateErrorMessageWithoutProvidePassword()[pri:4, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T12:19:41 IST" name="validateErrorMessageWithoutProvidePassword" description="Enter Email or Phone No in Email or Phone No Text field and click on Login and validate Error Message" finished-at="2024-03-07T12:19:50 IST" duration-ms="9023" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[error message is not matching, please check manually expected [The password that you've entered is incorrect. Forgotten password?] but found [The password that you've entered is incorrect.
+              <![CDATA[error message is not matching, please check manually expected [The password that you've entered is incorrect. 
+Forgotten password?] but found [The password that you've entered is incorrect.
 Forgotten password?]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: error message is not matching, please check manually expected [The password that you've entered is incorrect. Forgotten password?] but found [The password that you've entered is incorrect.
+              <![CDATA[java.lang.AssertionError: error message is not matching, please check manually expected [The password that you've entered is incorrect. 
+Forgotten password?] but found [The password that you've entered is incorrect.
 Forgotten password?]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -83,31 +85,31 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateErrorMessageWithoutProvidePassword -->
-        <test-method signature="validateErrorMessageWithoutProvideEmailOrPhoneNumber()[pri:5, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T11:19:02 IST" name="validateErrorMessageWithoutProvideEmailOrPhoneNumber" description="Enter Password in password Text field and click on Login and validate Error Message" finished-at="2024-03-07T11:19:04 IST" duration-ms="1815" status="PASS">
+        <test-method signature="validateErrorMessageWithoutProvideEmailOrPhoneNumber()[pri:5, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T12:19:50 IST" name="validateErrorMessageWithoutProvideEmailOrPhoneNumber" description="Enter Password in password Text field and click on Login and validate Error Message" finished-at="2024-03-07T12:19:53 IST" duration-ms="2132" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateErrorMessageWithoutProvideEmailOrPhoneNumber -->
-        <test-method signature="goBackToLogInPageAndValidateCreateNewAccountButtonIsPresentOrNot()[pri:6, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T11:19:04 IST" name="goBackToLogInPageAndValidateCreateNewAccountButtonIsPresentOrNot" description="Go Back To LogIn Page And Validate CreateNewAccount button Is Present or not" finished-at="2024-03-07T11:19:10 IST" duration-ms="5883" status="PASS">
+        <test-method signature="goBackToLogInPageAndValidateCreateNewAccountButtonIsPresentOrNot()[pri:6, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T12:19:53 IST" name="goBackToLogInPageAndValidateCreateNewAccountButtonIsPresentOrNot" description="Go Back To LogIn Page And Validate CreateNewAccount button Is Present or not" finished-at="2024-03-07T12:19:59 IST" duration-ms="5893" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goBackToLogInPageAndValidateCreateNewAccountButtonIsPresentOrNot -->
-        <test-method signature="click_on_forgetten_account_link_then_validate_Email_adddress_Or_phone_number_field()[pri:7, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T11:19:10 IST" name="click_on_forgetten_account_link_then_validate_Email_adddress_Or_phone_number_field" description="Click on Create Account Button and Verify nevigate to the signUp page." finished-at="2024-03-07T11:19:11 IST" duration-ms="566" status="PASS">
+        <test-method signature="click_on_forgetten_account_link_then_validate_Email_adddress_Or_phone_number_field()[pri:7, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T12:19:59 IST" name="click_on_forgetten_account_link_then_validate_Email_adddress_Or_phone_number_field" description="Click on Create Account Button and Verify nevigate to the signUp page." finished-at="2024-03-07T12:19:59 IST" duration-ms="642" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- click_on_forgetten_account_link_then_validate_Email_adddress_Or_phone_number_field -->
-        <test-method signature="VerifyAllFieldsArePresentInTheSignUpPage()[pri:8, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T11:19:11 IST" name="VerifyAllFieldsArePresentInTheSignUpPage" description="verify first name,surname,Mobile Number email address,New password field are present in the signup page." finished-at="2024-03-07T11:19:11 IST" duration-ms="289" status="PASS">
+        <test-method signature="VerifyAllFieldsArePresentInTheSignUpPage()[pri:8, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T12:19:59 IST" name="VerifyAllFieldsArePresentInTheSignUpPage" description="verify first name,surname,Mobile Number email address,New password field are present in the signup page." finished-at="2024-03-07T12:19:59 IST" duration-ms="250" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyAllFieldsArePresentInTheSignUpPage -->
-        <test-method signature="Enter_data_in_the_first_name_field_()[pri:9, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T11:19:11 IST" name="Enter_data_in_the_first_name_field_" description="Enter data in the first name field" finished-at="2024-03-07T11:19:11 IST" duration-ms="115" status="PASS">
+        <test-method signature="Enter_data_in_the_first_name_field_()[pri:9, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T12:19:59 IST" name="Enter_data_in_the_first_name_field_" description="Enter data in the first name field" finished-at="2024-03-07T12:20:00 IST" duration-ms="206" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Enter_data_in_the_first_name_field_ -->
-        <test-method signature="Enter_data_in_some_Filed_in_the_SignUp_page()[pri:10, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T11:19:11 IST" name="Enter_data_in_some_Filed_in_the_SignUp_page" description="Enter data (Read the data from Json File)in the surname,Mobile Number email address,New password field." finished-at="2024-03-07T11:19:11 IST" duration-ms="235" status="PASS">
+        <test-method signature="Enter_data_in_some_Filed_in_the_SignUp_page()[pri:10, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T12:20:00 IST" name="Enter_data_in_some_Filed_in_the_SignUp_page" description="Enter data (Read the data from Json File)in the surname,Mobile Number email address,New password field." finished-at="2024-03-07T12:20:00 IST" duration-ms="405" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Enter_data_in_some_Filed_in_the_SignUp_page -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T11:19:11 IST" name="tearDown" finished-at="2024-03-07T11:19:11 IST" duration-ms="196" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Facebook_L1_AutomationTest@79c5636f]" started-at="2024-03-07T12:20:00 IST" name="tearDown" finished-at="2024-03-07T12:20:00 IST" duration-ms="273" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

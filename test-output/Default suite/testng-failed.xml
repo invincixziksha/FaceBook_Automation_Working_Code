@@ -5,10 +5,10 @@
     <classes>
       <class name="testcases.Facebook_L1_AutomationTest">
         <methods>
-          <include name="validatePresenceOfOtherFieldsInLoginPage"/>
           <include name="initBrowser"/>
           <include name="tearDown"/>
           <include name="retryIfTestFails"/>
+          <include name="VerifyAllFieldsArePresentInTheSignUpPage"/>
         </methods>
       </class> <!-- testcases.Facebook_L1_AutomationTest -->
     </classes>

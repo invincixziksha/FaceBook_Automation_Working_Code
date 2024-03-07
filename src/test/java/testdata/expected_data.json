@@ -60,7 +60,7 @@
 		"errorMessageText":"The email address or mobile number you entered isn't connected to an account. Find your account and log in.Find your account and log in."
 	},
 	"errorMessage1":{
-		"errorMessageText":"The password that you've entered is incorrect. Forgotten password?"
+		"errorMessageText":"The password that you've entered is incorrect. \nForgotten password?"
 	}
 }
 

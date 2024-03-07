@@ -1,8 +1,10 @@
-package pages;
+package testdata;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import pages.StartupPage;
 
 public class LocatorsFactory extends StartupPage {
 	//please write all the locators for facebook page only 

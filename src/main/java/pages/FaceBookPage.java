@@ -10,23 +10,21 @@ public class FaceBookPage extends StartupPage {
 	//please write all the locators for facebook page only 
 
 	By loginButton = By.xpath("//button[@name='login']"); 
-	By EmailAddsPhoneNumberTextbox = By.xpath("//input[@placeholder='Email address or phone number']"); 
+	By emailAddsPhoneNumberTextbox = By.xpath("//input[@placeholder='Email address or phone number']"); 
 	By passwordTextbox = By.xpath("//input[@placeholder='Password']"); 
 	By profileIconImage = By.xpath("(//div//div//span)[14]"); 
 	By logoutButton = By.xpath("//span[contains(text (), 'Log out')]"); 
 	By forgettenPasswordLink = By.xpath("//a[.='Forgotten password?']"); 
 	By createNewAccountLink = By.xpath("//a[contains(text() , 'Create new account')]"); 
 	By emailTextField = By.id("email"); 
-	By errorMessage1 = By.xpath("//div[@id='email_container']//div[2]"); 
-	By errorMessage2 = By.xpath("//div[@id='email_container']//div[2]/a"); 
-	By errorMessage3 = By.xpath("//div[@class='_9ay7']"); 
-	By errorMessage4 = By.xpath("(//div[@class='_9ay7']//div//div)[1]"); 
-	By createNewAccount = By.xpath("//a[contains(text() , 'Create new account')]"); 
+	By errorMessageWithoutCredential = By.xpath("//div[@id='email_container']//div[2]"); 
+	By errorMessageWithoutCredentialForgetPassword = By.xpath("//div[@id='email_container']//div[2]/a"); 
+	By withoutPasswordErrorMessage = By.xpath("//div[contains(@class, 'clearfix') and contains(@class, 'mg')]//div[2]");
 	
-	By CreateNewAccount = By.xpath("//a[contains(text(),'Create new account')]"); 
-	By SignUpButton = By.xpath("//button[@name=\"websubmit\"]"); 
-	By NameFieldErorMessage = By.xpath("//div[@id='js_134']"); 
-	By FirstNameTextField = By.xpath("//input[@name=\"firstname\"]"); 
+	By createNewAccount = By.xpath("//a[contains(text(),'Create new account')]"); 
+	By signUpButton = By.xpath("//button[@name=\"websubmit\"]"); 
+	By nameFieldErorMessage = By.xpath("//div[@id='js_134']"); 
+	By firstNameTextField = By.xpath("//input[@name=\"firstname\"]"); 
 	By surNameTextField = By.xpath("//input[@name=\"lastname\"]"); 
 	By mobileNumberAndPassword = By.xpath("//input[@name=\"reg_email__\"]"); 
 	By newPassword = By.xpath("(//input[@type=\"password\"])[2]"); 
@@ -69,7 +67,7 @@ public class FaceBookPage extends StartupPage {
 	 */
 	public FaceBookPage facebookLoginForm(Map<String, String> expectedData) throws Exception {
 		try {
-			commonEvents.sendKeys(EmailAddsPhoneNumberTextbox,expectedData.get("emailAddsPhoneNumber"));	
+			commonEvents.sendKeys(emailAddsPhoneNumberTextbox,expectedData.get("emailAddsPhoneNumber"));	
 			commonEvents.sendKeys(passwordTextbox,expectedData.get("password"));
 			commonEvents.click(loginButton);
 			Thread.sleep(5000);
@@ -90,7 +88,7 @@ public class FaceBookPage extends StartupPage {
 	 */
 	public Boolean verifyPresenceOfALlFields() throws Exception {
 		try {
-			if(commonEvents.isDisplayed(EmailAddsPhoneNumberTextbox)&&
+			if(commonEvents.isDisplayed(emailAddsPhoneNumberTextbox)&&
 			commonEvents.isDisplayed(passwordTextbox)&&
 			commonEvents.isDisplayed(forgettenPasswordLink)&&
 			commonEvents.isDisplayed(createNewAccountLink)) {
@@ -113,8 +111,8 @@ public class FaceBookPage extends StartupPage {
 		try {
 			commonEvents.click(loginButton);
 			commonEvents.waitTillElementLocated(emailTextField, 60);
-			String ErrorMessageValue =  commonEvents.getText(errorMessage1) + commonEvents.getText(errorMessage2);
-			return ErrorMessageValue ;
+			String errorMessageWithoutCredentials =  commonEvents.getText(errorMessageWithoutCredential) + commonEvents.getText(errorMessageWithoutCredentialForgetPassword);
+			return errorMessageWithoutCredentials ;
 		}catch(Exception e) {
 			throw e;
 		}
@@ -146,10 +144,9 @@ public class FaceBookPage extends StartupPage {
 		try {
 			commonEvents.click(loginButton);
 			commonEvents.waitTillElementLocated(passwordTextbox, 60);
-//			String ErrorMessageValue =  commonEvents.getText(errorMessage3) + commonEvents.getText(errorMessage4);
-			String ErrorMessageValue =  commonEvents.getText(errorMessage3);
-			System.out.println("Error Message : " + ErrorMessageValue);
-			return ErrorMessageValue ;
+			String errorMessageWithoutPassword =  commonEvents.getText(withoutPasswordErrorMessage);
+			System.out.println("Error Message : " + errorMessageWithoutPassword);
+			return errorMessageWithoutPassword ;
 		}catch(Exception e) {
 			throw e;
 		}
@@ -164,7 +161,7 @@ public class FaceBookPage extends StartupPage {
 	 */
 	public void enterPassword(Map<String, String> expectedData) throws Exception {
 		try {
-			commonEvents.clear(EmailAddsPhoneNumberTextbox);
+			commonEvents.clear(emailAddsPhoneNumberTextbox);
 			commonEvents.sendKeys(passwordTextbox,expectedData.get("password"));	
 		}catch(Exception e) {
 			throw e;
@@ -202,8 +199,8 @@ public class FaceBookPage extends StartupPage {
 	 */
 	public String validateNavigateToTheSignUpPage() throws Exception {
 		try {
-			commonEvents.click(CreateNewAccount);
-			commonEvents.waitTillElementLocated(CreateNewAccount, 60);
+			commonEvents.click(createNewAccount);
+			commonEvents.waitTillElementLocated(createNewAccount, 60);
 			String signUpPageTitle	=  driver.getTitle();
 			System.out.println("Title of the Login Page : " + signUpPageTitle );
 			return signUpPageTitle;
@@ -223,10 +220,10 @@ public class FaceBookPage extends StartupPage {
 	 */
 	public  String enterDataInFirstNameField( Map<String, String> expectedData) throws Exception {
 		try {
-			commonEvents.sendKeys(FirstNameTextField,expectedData.get("FirstName"));
-			String FirstNameTextFieldString=commonEvents.getText(FirstNameTextField);
-			System.out.println(FirstNameTextFieldString);
-			return FirstNameTextFieldString;
+			commonEvents.sendKeys(firstNameTextField,expectedData.get("FirstName"));
+			String firstNameTextFieldString=commonEvents.getText(firstNameTextField);
+			System.out.println(firstNameTextFieldString);
+			return firstNameTextFieldString;
 		}catch(Exception e) {
 			throw e;
 		}
@@ -241,7 +238,7 @@ public class FaceBookPage extends StartupPage {
 	 */
 	public Boolean verifyPresenceOfAllFieldsPresentInTheSignUpPage() throws Exception {
 		try {
-			if(commonEvents.isDisplayed(FirstNameTextField)&&
+			if(commonEvents.isDisplayed(firstNameTextField)&&
 			commonEvents.isDisplayed(surNameTextField)&&
 			commonEvents.isDisplayed(mobileNumberAndPassword)&&
 			commonEvents.isDisplayed(newPassword)) {
@@ -257,17 +254,16 @@ public class FaceBookPage extends StartupPage {
 	 * about this method enterDataInSignUpPage() 
 	 * @param : Map<String, String>
 	 * @description : enter data in the  SignUpPage page,
-	 * @return : String
+	 * @return : null
 	 * @author : Yaksha
 	 *
 	 */
-		public  String enterDataInSignUpPage( Map<String, String> expectedData) throws Exception {
+		public  void enterDataInSignUpPage( Map<String, String> expectedData) throws Exception {
 			try {
 				commonEvents.sendKeys(surNameTextField,expectedData.get("surname"));
 				commonEvents.sendKeys(mobileNumberAndPassword,expectedData.get("mobileNumberandpassword"));
 				commonEvents.sendKeys(newPassword,expectedData.get("newPassword"));
 
-				return "";
 			}catch(Exception e) {
 				throw e;
 			}

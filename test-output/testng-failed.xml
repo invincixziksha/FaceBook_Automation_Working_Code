@@ -17,7 +17,7 @@
       <class name="testcases.Facebook_L1_AutomationTest">
         <methods>
           <include name="initBrowser"/>
-          <include name="validateErrorMessageWithoutProvidePassword"/>
+          <include name="selectAnyOptionFromYourPronouDropdownAndVerifyYourPronouDropdownIsPrsentOrNot"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testcases.Facebook_L1_AutomationTest -->

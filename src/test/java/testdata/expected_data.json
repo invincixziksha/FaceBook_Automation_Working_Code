@@ -8,11 +8,14 @@
 	
 	"logInCredential":{
 		"emailAddsPhoneNumber":"9124564060",
-		"password":"Surya@123456",
-		"FirstName":"Abhisek",
-		"surname":"mohanta",
-		"mobileNumberandpassword":"Abhi@12345",
-		"newPassword":"678965678"
+		"password":"Surya@123456"
+	},
+
+	"createNewAccountDetails":{
+		"FirstName":"ALEXA",
+		"surname":"RIHANA",
+		"emailOrMobileNumber":"8093151424",
+		"newPassword":"example@12345"
 	},
 
 	"EmailOrPhoneNumber":{
@@ -61,6 +64,12 @@
 	},
 	"errorMessage1":{
 		"errorMessageText":"The password that you've entered is incorrect."
+	},
+	"Gender_Optional_TextField_data":{
+		"GenderOptionalValue":"The password that you've entered is incorrect."
+	},
+	"credentials":{
+		"Username":"9514048813",
+		"Password":"shibu04@Facebook"
 	}
 }
-

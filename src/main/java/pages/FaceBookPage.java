@@ -91,7 +91,7 @@ public class FaceBookPage extends StartupPage {
 	/**@test3
 	 * about this method validateErrorMessageWithoutProvideAnyCredentials() 
 	 * @param : null
-	 * @description : it is getting the error message and validate the error message ,
+	 * @description : it is getting the error message if login button clicked without passing email and password
 	 * @return : errorMessage as string type
 	 * @author : Yaksha
 	 */

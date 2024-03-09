@@ -1,5 +1,10 @@
 package coreUtilities.utils;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.net.URL;
@@ -4431,6 +4436,25 @@ public class CommonEvents
             // Click on the first matching element
             elements.get(0).click();
         }
+        return new CommonEvents(driver);
+	}
+	
+	public CommonEvents fileUpload(String pathOfTheFile ) throws AWTException
+	{
+		StringSelection selectFile=new StringSelection(pathOfTheFile);
+//		internally copy the file
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selectFile, null);
+		Robot robot=new Robot();
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_V);
+		robot.keyPress(KeyEvent.VK_TAB);
+		robot.keyPress(KeyEvent.VK_TAB);
+		robot.keyRelease(KeyEvent.VK_TAB);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+
         return new CommonEvents(driver);
 	}
 }

@@ -14,13 +14,13 @@
       </run>
     </groups>
     <classes>
-      <class name="testcases.Facebook_L1_AutomationTest">
+      <class name="testcases.Facebook_L2_AutomationTest">
         <methods>
           <include name="initBrowser"/>
-          <include name="selectAnyOptionFromYourPronouDropdownAndVerifyYourPronouDropdownIsPrsentOrNot"/>
+          <include name="toHideThePeopleYouMayKnowSection"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testcases.Facebook_L1_AutomationTest -->
+      </class> <!-- testcases.Facebook_L2_AutomationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

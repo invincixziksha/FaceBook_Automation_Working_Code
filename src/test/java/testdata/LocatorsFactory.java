@@ -31,6 +31,18 @@ public class LocatorsFactory extends StartupPage {
 	By selectYourPronounDropdown = By.xpath("//select[@name='preferred_pronoun']");
 	By genderOptionalTextBox = By.xpath("//input[@name='custom_gender']");
 	
+	By notificationIcon=By.xpath("//a[@aria-label=\"Notifications, 2 unread\"]");
+	By editProfileButton=By.xpath("(//span[.='Edit profile'])[1]");
+	By addToStoryButton=By.xpath("//span[contains(text(),'Add to story')]");
+	By ediDetailsButton=By.xpath("(//span[.='Edit details'])[2]");
+	By workAndEducationIcon=By.xpath("//span[.='Work and education']");
+	By companyTextField=By.xpath("//input[@aria-label=\"Company\"]");
+	By currentCityTextField=By.xpath("//label[@aria-label=\"Current town/city\"]");
+	By homeTownTextField=By.xpath("//label[contains(@aria-label,'Home town')]");
+	By schoolTextFieldPresentInsideSecondarySchoolTextField=By.xpath("//input[@aria-label=\"School\"]");
+	By LogoutButton=By.xpath("//span[.='Log out']");
+	By accountIcon=By.xpath("(//div[contains(@class,\"x1rg5ohu x1n2onr6 x3ajldb x1ja2u2z\")])[1]");
+	
 	
 
 	 
@@ -139,5 +151,52 @@ public class LocatorsFactory extends StartupPage {
 		WebElement genderOptionalTextBoxWebElement = driver.findElement(genderOptionalTextBox);
         return genderOptionalTextBoxWebElement;
     }
+	
+	public WebElement notificationIconIsPresent(WebDriver driver) {
+		WebElement notificationIconWebElement = driver.findElement(notificationIcon);
+        return notificationIconWebElement;
+    }
+	public WebElement editProfileButtonIsPresent(WebDriver driver) {
+		WebElement editProfileButtonWebElement = driver.findElement(editProfileButton);
+        return editProfileButtonWebElement;
+    }
+	public WebElement addToStoryButtonIsPresent(WebDriver driver) {
+		WebElement addToStoryButtonWebElement = driver.findElement(addToStoryButton);
+        return addToStoryButtonWebElement;
+    }
+	public WebElement editDetailsFieldIsPresent(WebDriver driver) {
+		WebElement ediDetailsButtonWebElement = driver.findElement(ediDetailsButton);
+        return ediDetailsButtonWebElement;
+    }
+	public WebElement workAndEducationIconIsPresent(WebDriver driver) {
+		WebElement workAndEducationIconWebElement = driver.findElement(workAndEducationIcon);
+        return workAndEducationIconWebElement;
+    }
+	public WebElement companyTextFieldIsPresent(WebDriver driver) {
+		WebElement companyTextFieldWebElement = driver.findElement(companyTextField);
+        return companyTextFieldWebElement;
+    }
+	
+	public WebElement currentCityTextFieldIsPresent(WebDriver driver) {
+		WebElement currentCityTextFieldWebElement = driver.findElement(currentCityTextField);
+        return currentCityTextFieldWebElement;
+    }
+	
+	public WebElement homeTownTextFieldIsPresent(WebDriver driver) {
+		WebElement homeTownTextFieldWebElement = driver.findElement(homeTownTextField);
+        return homeTownTextFieldWebElement;
+    }
+	public WebElement schoolTextFieldPresentInsideSecondarySchoolTextFieldIsPresent(WebDriver driver) {
+		WebElement schoolTextFieldPresentInsideSecondarySchoolTextFieldWebElement = driver.findElement(schoolTextFieldPresentInsideSecondarySchoolTextField);
+        return schoolTextFieldPresentInsideSecondarySchoolTextFieldWebElement;
+    }
+	public WebElement logOutButtonIsPresent(WebDriver driver) {
+		WebElement LogoutButtonWebElement = driver.findElement(LogoutButton);
+    return LogoutButtonWebElement;
+	}
+    public WebElement accountIconIsPresent(WebDriver driver) {
+		WebElement accountIconWebElement = driver.findElement(accountIcon);
+    return accountIconWebElement;
+}
 	
 }

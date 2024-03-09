@@ -5,19 +5,22 @@
 	"HomePage_Title":{
 		"pageTitle":"Facebook – log in or sign up"
 	},
-	
 	"logInCredential":{
 		"emailAddsPhoneNumber":"9124564060",
-		"password":"Surya@123456"
+		"password1":"Surya@123456",
+		"Username":"9514048813",
+		"Password":"shibu04@Facebook",
+		"pageTitle_after_loggedin":"Facebook",
+		"ProfileName":"Shibu Dharshan ",
+		"Bio_Section":"Designing unique solutions for unique problems.",
+		"university_name":"Test university"
 	},
-
 	"createNewAccountDetails":{
 		"FirstName":"ALEXA",
 		"surname":"RIHANA",
 		"emailOrMobileNumber":"8093151424",
 		"newPassword":"example@12345"
 	},
-
 	"EmailOrPhoneNumber":{
 		"emailAddsPhoneNumber":"9124564060"
 	},
@@ -33,7 +36,6 @@
 	"Login_button":{
 		"Login_button_meassge":"Log in"
 	},
-
 	"Forgot_Password":{
 		"Forgot_Password_title":"Forgotten Password | Can't Log In | Facebook"
 	},
@@ -71,5 +73,11 @@
 	"credentials":{
 		"Username":"9514048813",
 		"Password":"shibu04@Facebook"
+	},
+	"About_Section":{
+		"Company_name_textfield":"yakshaa",
+		"hometown_textfield":"Test",
+		"current_city":"Test",
+		"Secondary_School":"Test Public school"
 	}
 }

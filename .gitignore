@@ -1,1 +1,8 @@
 /target/
+/test-output/
+.classpath
+.project
+/TestReport/
+
+
+

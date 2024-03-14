@@ -49,6 +49,7 @@ public class Facebook_L2_Pages extends StartupPage
 	By accountIcon=By.xpath("(//div[contains(@class,\"x1rg5ohu x1n2onr6 x3ajldb x1ja2u2z\")])[1]");
 	By leavePageButton=By.xpath("(//span[.='Leave Page'])[3]");
 	By LogoutButton=By.xpath("//span[contains(text(),'Log out')]");
+	By notificationLink =By.xpath("//a[@aria-label='Notifications']");
 
 	public Facebook_L2_Pages(WebDriver driver) {
 		super(driver);
@@ -83,7 +84,8 @@ public class Facebook_L2_Pages extends StartupPage
 	 */
 	public String afterLoggedinValidateTheTitleOfFacebookHomePage() throws Exception {
 		try {
-
+			commonEvents.click(notificationLink);
+			commonEvents.click(notificationLink);
 			String currentPageTitle	=  driver.getTitle();
 			System.out.println("Title of the Home Page after logged in:" + currentPageTitle );
 			return currentPageTitle;

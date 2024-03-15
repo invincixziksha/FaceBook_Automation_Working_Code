@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-public class FaceBookPage extends StartupPage {
+public class Facebook_L1_Pages extends StartupPage {
 	//please write all the locators for facebook page only 
 
 	By loginButton = By.xpath("//button[@name='login']"); 
@@ -42,7 +42,7 @@ public class FaceBookPage extends StartupPage {
 
 
 
-	public FaceBookPage(WebDriver driver) {
+	public Facebook_L1_Pages(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this); // Initialize Page Factory
 		// TODO Auto-generated constructor stub

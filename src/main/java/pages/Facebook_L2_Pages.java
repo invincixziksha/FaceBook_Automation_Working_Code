@@ -20,11 +20,11 @@ public class Facebook_L2_Pages extends StartupPage
 	By newPassword = By.xpath("(//input[@type=\"password\"])[2]"); 
 	By profile = By.xpath("(//span[.='Shibu Dharshan'])[1]"); 
 	By profileName = By.xpath("//h1[contains(text(),'Shibu Dharshan')]"); 
-	By updateProfilePicture = By.xpath("//div[@aria-label=\"Update profile picture\"]"); 
-	By uploadPhoto = By.xpath("//span[contains(text(),'Upload Photo')]"); 
+	By updateProfilePictureCameraIcon = By.xpath("//div[@aria-label=\"Update profile picture\"]"); 
+	By uploadPhotoButton = By.xpath("//span[contains(text(),'Upload Photo')]"); 
 	By saveButton = By.xpath("(//span[.='Save'])[1]"); 
 	By editProfileButton=By.xpath("//span[contains(text(),'Edit profile')]");
-	By addButtonInsideBioSection=By.xpath("(//span[.='Add'])[3]");
+	By addButtonInsideBioSection=By.xpath("(//div[@aria-label=\"Add Bio\"])[2]");
 	By describeWhoAreYouTextField=By.xpath("//textarea[@aria-label=\"Enter bio text\"]");
 	By saveButtonPresentInsideTheBioSection=By.xpath("(//span[.='Save'])[2]");
 	By xButton=By.xpath("//div[contains(@class,'x92rtbv x10l6tqk x1tk7jg1 x1vjfeg')]");
@@ -49,13 +49,13 @@ public class Facebook_L2_Pages extends StartupPage
 	By accountIcon=By.xpath("(//div[contains(@class,\"x1rg5ohu x1n2onr6 x3ajldb x1ja2u2z\")])[1]");
 	By leavePageButton=By.xpath("(//span[.='Leave Page'])[3]");
 	By LogoutButton=By.xpath("//span[contains(text(),'Log out')]");
-	By notificationLink =By.xpath("//a[@aria-label='Notifications']");
-
+	By notificationLink=By.xpath("//div[@class=\"x6s0dn4 x78zum5 x5yr21d xl56j7k x1emribx\"]//a[contains(@aria-label,\"Notifications\")]");
+	
+	
 	public Facebook_L2_Pages(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this); // Initialize Page Factory
 	}
-
 	/**@Test1
 	 * about this method loginToFacebookByGivenValidCredetial() 
 	 * @param : Map<String, String>
@@ -64,15 +64,19 @@ public class Facebook_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public boolean loginToFacebookByGivenValidCredetial(Map<String, String> expectedData) throws Exception {
+		Boolean profileIsDisplayed=false;
 		try {
 			commonEvents.sendKeys(emailAddsPhoneNumberTextbox,expectedData.get("Username"));	
 			commonEvents.sendKeys(passwordTextbox,expectedData.get("Password"));
 			commonEvents.click(loginButton);
-
+			if(commonEvents.isDisplayed(profile))
+			{
+				profileIsDisplayed=true;
+			}
 		}catch(Exception e) {
 			throw e;
 		}
-		return true;
+		return profileIsDisplayed;
 	}
 
 	/**@Test2
@@ -83,15 +87,17 @@ public class Facebook_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public String afterLoggedinValidateTheTitleOfFacebookHomePage() throws Exception {
+		String currentPageTitle="";
 		try {
 			commonEvents.click(notificationLink);
 			commonEvents.click(notificationLink);
-			String currentPageTitle	=  driver.getTitle();
+			currentPageTitle	=  driver.getTitle();
 			System.out.println("Title of the Home Page after logged in:" + currentPageTitle );
-			return currentPageTitle;
 		}catch(Exception e) {
 			throw e;
 		}
+		return currentPageTitle;
+
 	}
 
 	/**@Test3
@@ -102,14 +108,16 @@ public class Facebook_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public String clickonProfileAndValidateTheProfileName() throws Exception {
+		String profilename="";
 		try {
 			commonEvents.click(profile);
-			String profilename=commonEvents.getText(profileName);
+			profilename=commonEvents.getText(profileName);
 			System.out.println("Profile name is :"+profilename);
-			return profilename;
 		}catch(Exception e) {
 			throw e;
 		}
+		return profilename;
+
 	}
 
 	/**@Test4
@@ -119,24 +127,22 @@ public class Facebook_L2_Pages extends StartupPage
 	 * @return : boolean
 	 * @author : Yaksha
 	 */
-	public boolean clickOnUpdateProfilePicture_and_UploadProfilePicture(String pathOfTheFile) throws Exception {
+	public boolean clickOnUpdateProfilePictureAndUploadProfilePicture(String pathOfTheFile) throws Exception {
+		boolean isUploaded = false;
 		try {
-			commonEvents.jsClick(updateProfilePicture);
-			Thread.sleep(3000);
-			commonEvents.click(uploadPhoto);
-			Thread.sleep(3000);
-			//			set the path of the image as per your system
-			String pathOftheFile="C:\\Users\\Surya Prakash\\Downloads\\uploadPhotos.jpg";
-			Thread.sleep(3000);
-			commonEvents.fileUpload(pathOftheFile);
-			Thread.sleep(3000);
+			Thread.sleep(5000);
+			commonEvents.jsClick(updateProfilePictureCameraIcon);
+			commonEvents.click(uploadPhotoButton);
+			System.out.println("path of the file" + pathOfTheFile );
+			Thread.sleep(5000);
+			commonEvents.fileUpload(pathOfTheFile);
 			commonEvents.click(saveButton);
 			Thread.sleep(3000);
-
+			isUploaded=true;
 		}catch(Exception e) {
 			throw e;
 		}
-		return true;
+		return isUploaded;
 	}
 
 	/**@Test5
@@ -146,17 +152,21 @@ public class Facebook_L2_Pages extends StartupPage
 	 * @return : boolean
 	 * @author : Yaksha
 	 */
-	public boolean clickOnEditProfileAndFillTheDetailInBioSection(Map<String, String> expectedData) throws Exception {
+	public boolean clickOnEditProfileAndFillTheDetaFilInBioSection(Map<String, String> expectedData) throws Exception {
 		try {
-			commonEvents.jsClick(editProfileButton);
+			commonEvents.click(editProfileButton);
 			Thread.sleep(3000);
 			commonEvents.click(addButtonInsideBioSection);
+			Thread.sleep(5000);
 			commonEvents.sendKeys(describeWhoAreYouTextField,expectedData.get("Bio_Section"));
-			driver.navigate().refresh();
+			if(commonEvents.isDisplayed(describeWhoAreYouTextField))
+			{
+				return true;
+			}
 		}catch(Exception e) {
 			throw e;
 		}
-		return true;
+		return false;
 	}
 
 	/**@Test6
@@ -167,13 +177,18 @@ public class Facebook_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public boolean clickOnPostsandGoToIntroSectionAndAddDetailsInAddBio(Map<String, String> expectedData) throws Exception {
+		Boolean isFilled=false;
 		try {
+			commonEvents.refreshPage();
 			commonEvents.click(addBioButton);
 			commonEvents.sendKeys(describeWhoAreYouTextField,expectedData.get("Bio_Section"));
+			if(commonEvents.getAttribute(describeWhoAreYouTextField, "value").equals(expectedData.get("Bio_Section"))) {
+				isFilled = true;
+			}	
 		}catch(Exception e) {
 			throw e;
 		}
-		return true;
+		return isFilled;
 
 	}
 
@@ -185,15 +200,17 @@ public class Facebook_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public boolean clickOnAboutAndGoIntoOverviewAndAddUniversity(Map<String, String> expectedData) throws Exception {
+		Boolean isFilled=false;
 		try {
 			commonEvents.click(aboutSection);
 			commonEvents.jsClick(addUniversityIcon);
 			commonEvents.sendKeys(schoolTextField,expectedData.get("university_name"));
-
-		}catch(Exception e) {
+			if(commonEvents.getAttribute(schoolTextField, "value").equals(expectedData.get("university_name"))) {
+				isFilled = true;
+			}		}catch(Exception e) {
 			throw e;
 		}
-		return true;
+		return isFilled;
 
 	}
 
@@ -206,13 +223,17 @@ public class Facebook_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public boolean clickonAddWorkplaceAndAddCompanyName(Map<String, String> expectedData) throws Exception {
+		Boolean isFilled=false;
 		try {
 			commonEvents.click(addWorkplaceButton);
 			commonEvents.sendKeys(companyTextField,expectedData.get("Company_name_textfield"));
+			if(commonEvents.getAttribute(companyTextField, "value").equals(expectedData.get("Company_name_textfield"))) {
+				isFilled = true;
+			}	
 		}catch(Exception e) {
 			throw e;
 		}
-		return true;
+		return isFilled;
 
 	}
 	/**@Test9
@@ -224,16 +245,20 @@ public class Facebook_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public boolean clickOnAddHomeTownandAddHomeTown(Map<String, String> expectedData) throws Exception {
+		Boolean isFilled=false;
 		try {
 			driver.navigate().refresh();
 			commonEvents.click(upperArrowButtonToHideTheYouMayKnowSection);
 			commonEvents.click(addHomeTownButton);
 			Thread.sleep(3000);
 			commonEvents.sendKeys(homeTownTextField,expectedData.get("hometown_textfield"));
+			if(commonEvents.getAttribute(homeTownTextField, "value").equals(expectedData.get("hometown_textfield"))) {
+				isFilled = true;
+			}	
 		}catch(Exception e) {
 			throw e;
 		}
-		return true;
+		return isFilled;
 
 	}
 
@@ -246,16 +271,20 @@ public class Facebook_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public boolean clickOnAddCurrentCityandAddCurrentCity(Map<String, String> expectedData) throws Exception {
+		Boolean isFilled=false;
 		try {
 			driver.navigate().refresh();
 			commonEvents.click(upperArrowButtonToHideTheYouMayKnowSection);
 			commonEvents.click(addCurrentCityButton);
 			Thread.sleep(3000);
 			commonEvents.sendKeys(currentCityTextField,expectedData.get("current_city"));
+			if(commonEvents.getAttribute(currentCityTextField, "value").equals(expectedData.get("current_city"))) {
+				isFilled = true;
+			}
 		}catch(Exception e) {
 			throw e;
 		}
-		return true;
+		return isFilled;
 
 	}
 
@@ -268,16 +297,20 @@ public class Facebook_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public boolean clickOnAddSecondarySchoolandAddSchool(Map<String, String> expectedData) throws Exception {
+		Boolean isFilled=false;
 		try {
-			driver.navigate().refresh();
+			commonEvents.refreshPage();
 			commonEvents.click(upperArrowButtonToHideTheYouMayKnowSection);
 			commonEvents.click(addSecondarySchoolButton);
 			Thread.sleep(3000);
 			commonEvents.sendKeys(schoolTextFieldPresentInsideSecondarySchoolTextField,expectedData.get("Secondary_School"));
+			if(commonEvents.getAttribute(schoolTextFieldPresentInsideSecondarySchoolTextField, "value").equals(expectedData.get("Secondary_School"))) {
+				isFilled = true;
+			}
 		}catch(Exception e) {
 			throw e;
 		}
-		return true;
+		return isFilled;
 
 	}
 
@@ -290,17 +323,22 @@ public class Facebook_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public boolean clickOnAddRelationshipStatusandAddRelationshipStatusAsSingle(Map<String, String> expectedData) throws Exception {
+		Boolean isDisplayed=false;
 		try {
-			driver.navigate().refresh();
+			commonEvents.refreshPage();
 			commonEvents.click(upperArrowButtonToHideTheYouMayKnowSection);
 			commonEvents.click(addRelationshipStatusButton);
 			Thread.sleep(3000);
 			commonEvents.click(stausDropdown);
 			commonEvents.click(selectSingle);
+			if(commonEvents.isDisplayed(selectSingle))
+			{
+				isDisplayed=true;
+			}
 		}catch(Exception e) {
 			throw e;
 		}
-		return true;
+		return isDisplayed;
 
 	}
 
@@ -312,14 +350,19 @@ public class Facebook_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public boolean gotoThePreviousPageAndClickOnAccount() throws Exception {
+		Boolean accountIconIsDisplayed=false;
 		try {
 			driver.navigate().back();
 			commonEvents.click(leavePageButton);
 			commonEvents.jsClick(accountIcon);
+			if(commonEvents.isDisplayed(accountIcon))
+			{
+				accountIconIsDisplayed=true;
+			}
 		}catch(Exception e) {
 			throw e;
 		}
-		return true;
+		return accountIconIsDisplayed;
 
 	}
 	/**@Test14
@@ -330,14 +373,19 @@ public class Facebook_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public boolean clickonTheLogoutButton() throws Exception {
+		Boolean emailAddsPhoneNumberTextboxIsDisplayed=false;
 		try {
 			commonEvents.isDisplayed(LogoutButton);
 			commonEvents.click(LogoutButton);
+			if(commonEvents.isDisplayed(emailAddsPhoneNumberTextbox))
+			{
+				emailAddsPhoneNumberTextboxIsDisplayed=true;
+			}
 		}catch(Exception e) {
 			throw e;
 		}
-		return true;
-
+		return emailAddsPhoneNumberTextboxIsDisplayed;
 	}
+
 
 }

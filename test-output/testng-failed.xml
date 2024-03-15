@@ -16,22 +16,9 @@
     <classes>
       <class name="testcases.Facebook_L2_AutomationTest">
         <methods>
-          <include name="clickOnAboutAndGoIntoOverviewAndAddUniversity"/>
-          <include name="clickOnProfileAndValidateTheProfileName"/>
-          <include name="clickOnAddRelationshipStatusAndAddRelationshipStatusAsSingle"/>
-          <include name="clickOnAddWorkplaceAndAddCompanyName"/>
-          <include name="clickOnAddCurrentCityAndAddCurrentCity"/>
-          <include name="clickOnPostsAndGoToIntroSectionAndAddDetailsInAddBio"/>
-          <include name="tearDown"/>
-          <include name="afterLoggedInValidateTheTitleOfFacebookHomePage"/>
           <include name="clickOnEditProfileandillTheDetailInBioSection"/>
           <include name="initBrowser"/>
-          <include name="goToThePreviousPageAndClickOnAccount"/>
-          <include name="loginTheFacebookByGivenValidCredetial"/>
-          <include name="clickOnLogoutButton"/>
-          <include name="clickOnAddHomeTownAndAddHomeTown"/>
-          <include name="clickOnUpdateProfilePictureAndUploadProfilePicture"/>
-          <include name="clickOnAddSecondarySchoolAndAddSchool"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- testcases.Facebook_L2_AutomationTest -->
     </classes>

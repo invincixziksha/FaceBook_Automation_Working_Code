@@ -57,14 +57,15 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public String validateFacebookTitleOfLoginPage() throws Exception {
+		String currentPageTitle="";
 		try {
-
-			String currentPageTitle	=  driver.getTitle();
+			currentPageTitle= commonEvents.getTitle();
 			System.out.println("Title of the Login Page : " + currentPageTitle );
-			return currentPageTitle;
 		}catch(Exception e) {
 			throw e;
 		}
+		return currentPageTitle;
+
 	}
 
 	/**@test2
@@ -75,17 +76,18 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public Boolean verifyPresenceOfALlFields() throws Exception {
+		Boolean createNewAccountLinkIsDisplayed=false;
 		try {
 			if(commonEvents.isDisplayed(emailAddsPhoneNumberTextbox)&&
 					commonEvents.isDisplayed(passwordTextbox)&&
 					commonEvents.isDisplayed(forgettenPasswordLink)&&
 					commonEvents.isDisplayed(createNewAccountLink)) {
-				return true;
+				createNewAccountLinkIsDisplayed= true;
 			}	
 		}catch(Exception e) {
 			throw e;	
 		}
-		return false;
+		return createNewAccountLinkIsDisplayed;
 	}
 
 	/**@test3
@@ -96,14 +98,15 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public String validateErrorMessageWithoutProvideAnyCredentials() throws Exception {
+		String errorMessageWithoutCredentials="";
 		try {
 			commonEvents.click(loginButton);
 			commonEvents.waitTillElementLocated(emailTextField, 60);
-			String errorMessageWithoutCredentials =  commonEvents.getText(errorMessageWithoutCredential) + commonEvents.getText(errorMessageWithoutCredentialForgetPassword);
-			return errorMessageWithoutCredentials ;
+			 errorMessageWithoutCredentials =  commonEvents.getText(errorMessageWithoutCredential) + commonEvents.getText(errorMessageWithoutCredentialForgetPassword);
 		}catch(Exception e) {
 			throw e;
 		}
+		return errorMessageWithoutCredentials ;
 	}
 
 	/**
@@ -113,12 +116,18 @@ public class FaceBookPage extends StartupPage {
 	 * @return : null
 	 * @author : Yaksha
 	 */
-	public void enterEmailIdOrPhoneNumberInLoginPage(Map<String, String> expectedData) throws Exception {
+	public boolean enterEmailIdOrPhoneNumberInLoginPage(Map<String, String> expectedData) throws Exception {
+		Boolean emailTextFieldIsDisplayed=false;
 		try {
-			commonEvents.sendKeys(emailTextField,expectedData.get("emailAddsPhoneNumber"));	
+			if(commonEvents.isDisplayed(emailTextField))
+			{
+			commonEvents.sendKeys(emailTextField,expectedData.get("emailAddsPhoneNumber"));
+			emailTextFieldIsDisplayed= true;
+			}
 		}catch(Exception e) {
 			throw e;
 		}
+		return emailTextFieldIsDisplayed;
 	}
 
 	/**@test4
@@ -129,15 +138,16 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public String validateErrorMessageWithoutProvidePassword(Map<String, String> expectedData) throws Exception {
+		String errorMessageWithoutPassword="";
 		try {
 			commonEvents.click(loginButton);
 			commonEvents.waitTillElementLocated(passwordTextbox, 60);
-			String errorMessageWithoutPassword =  commonEvents.getText(withoutPasswordErrorMessage);
+			errorMessageWithoutPassword =  commonEvents.getText(withoutPasswordErrorMessage);
 			System.out.println("Error Message : " + errorMessageWithoutPassword);
-			return errorMessageWithoutPassword ;
 		}catch(Exception e) {
 			throw e;
 		}
+		return errorMessageWithoutPassword ;
 	}
 
 	/**
@@ -147,13 +157,19 @@ public class FaceBookPage extends StartupPage {
 	 * @return : null
 	 * @author : Yaksha
 	 */
-	public void enterPasswordInLoginPage(Map<String, String> expectedData) throws Exception {
+	public boolean enterPasswordInLoginPage(Map<String, String> expectedData) throws Exception {
+		Boolean passwordTextboxisFilled=false;
 		try {
 			commonEvents.clear(emailAddsPhoneNumberTextbox);
-			commonEvents.sendKeys(passwordTextbox,expectedData.get("password"));	
+			commonEvents.sendKeys(passwordTextbox,expectedData.get("password"));
+			if(commonEvents.getAttribute(passwordTextbox, "value").equals(expectedData.get("password"))) {
+				passwordTextboxisFilled = true;
+			}
+
 		}catch(Exception e) {
 			throw e;
 		}
+		return passwordTextboxisFilled;
 	}
 
 	/**@test5
@@ -164,14 +180,15 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public String validateErrorMessageWithoutProvideEmailOrPhoneNumber() throws Exception {
+		String errorMessageWithoutCredentials="";
 		try {
 			commonEvents.click(loginButton);
 			commonEvents.waitTillElementLocated(emailTextField, 60);
-			String errorMessageWithoutCredentials =  commonEvents.getText(errorMessageWithoutCredential) + commonEvents.getText(errorMessageWithoutCredentialForgetPassword);
-			return errorMessageWithoutCredentials ;
+			errorMessageWithoutCredentials =  commonEvents.getText(errorMessageWithoutCredential) + commonEvents.getText(errorMessageWithoutCredentialForgetPassword);
 		}catch(Exception e) {
 			throw e;
 		}
+		return errorMessageWithoutCredentials ;
 	}
 
 	/**@test6
@@ -182,18 +199,19 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public Boolean goBackToLogInPageAndValidateCreateNewAccountButtonIsPresentOrNot() throws Exception {
+		Boolean createNewAccountIsDisplayed=false;
 		try {
-			driver.navigate().back();
-			driver.get("https://www.facebook.com/");
+            commonEvents.navigateBack();		
+            driver.get("https://www.facebook.com/");
 			Thread.sleep(5000);
 			commonEvents.waitTillElementLocated(createNewAccount, 60);
 			if(commonEvents.isDisplayed(createNewAccount)) {
-				return true;
+				createNewAccountIsDisplayed=true;
 			}	
 		}catch(Exception e) {
 			throw e;	
 		}
-		return false;
+		return createNewAccountIsDisplayed;
 	}
 
 	/**@test7
@@ -204,16 +222,18 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public String validateNavigateToTheSignUpPage() throws Exception {
+		String signUpPageTitle="";
 		try {
 			commonEvents.click(createNewAccount);
 			commonEvents.waitTillElementLocated(createNewAccount, 60);
-			String signUpPageTitle	=  driver.getTitle();
+			signUpPageTitle	=  driver.getTitle();
 			System.out.println("Title of the Signup Page : " + signUpPageTitle );
-			return signUpPageTitle;
 
 		}catch(Exception e) {
 			throw e;
 		}
+		return signUpPageTitle;
+
 	}
 
 	/**@test8
@@ -224,17 +244,18 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public Boolean verifyPresenceOfAllFieldsPresentInTheSignUpPage() throws Exception {
+		Boolean newPasswordIsDisplayed=false;
 		try {
 			if(commonEvents.isDisplayed(firstNameTextField)&&
 					commonEvents.isDisplayed(surNameTextField)&&
 					commonEvents.isDisplayed(mobileNumberAndPassword)&&
 					commonEvents.isDisplayed(newPassword)) {
-				return true;
+				newPasswordIsDisplayed= true;
 			}	
 		}catch(Exception e) {
 			throw e;	
 		}
-		return false;
+		return newPasswordIsDisplayed;
 	}
 
 	/**@test9
@@ -245,15 +266,15 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public  String enterDataInFirstNameFieldSignupPage( Map<String, String> expectedData) throws Exception {
+		String firstNameTextFieldString="";
 		try {
 			commonEvents.sendKeys(firstNameTextField,expectedData.get("FirstName"));
-			String firstNameTextFieldString=commonEvents.getText(firstNameTextField);
+			firstNameTextFieldString=commonEvents.getText(firstNameTextField);
 			System.out.println(firstNameTextFieldString);
-			return firstNameTextFieldString;
 		}catch(Exception e) {
 			throw e;
 		}
-
+		return firstNameTextFieldString;
 	}
 
 	/**@test10
@@ -264,14 +285,20 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 *
 	 */
-	public  void enterDataInSignUpPage( Map<String, String> expectedData) throws Exception {
+	public  boolean enterDataInSignUpPage( Map<String, String> expectedData) throws Exception {
+		Boolean newPasswordIsFilled=false;
 		try {
 			commonEvents.sendKeys(surNameTextField,expectedData.get("surname"));
 			commonEvents.sendKeys(mobileNumberAndPassword,expectedData.get("emailOrMobileNumber"));
 			commonEvents.sendKeys(newPassword,expectedData.get("newPassword"));
+			if(commonEvents.getAttribute(newPassword, "value").equals(expectedData.get("newPassword"))) {
+				newPasswordIsFilled = true;
+			}
+			
 		}catch(Exception e) {
 			throw e;
 		}
+		return newPasswordIsFilled;
 	}
 
 	/**@test11
@@ -282,15 +309,16 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public Boolean selectDateFromDateDropdownAndVerifyDateDropdownIsPrsentOrNot() throws Exception {
+		Boolean selectDateFromDateDropdownIsDisplayed=false;
 		commonEvents.selectByValue(selectDateFromDateDropdown, "25");
 		try {
 			if(commonEvents.isDisplayed(selectDateFromDateDropdown)) {
-				return true;
+				selectDateFromDateDropdownIsDisplayed=true;
 			}	
 		}catch(Exception e) {
 			throw e;	
 		}
-		return false;
+		return selectDateFromDateDropdownIsDisplayed;
 	}
 
 	/**@test12
@@ -301,15 +329,16 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public Boolean selectAnyMonthFromMonthDropdownAndVerifyMonthDropdownIsPrsentOrNot() throws Exception {
+		Boolean selectBirthdayMonthIsDisplayed=false;
 		commonEvents.selectByValue(selectBirthdayMonth, "Jun");
 		try {
 			if(commonEvents.isDisplayed(selectBirthdayMonth)) {
-				return true;
+				selectBirthdayMonthIsDisplayed= true;
 			}	
 		}catch(Exception e) {
 			throw e;	
 		}
-		return false;
+		return selectBirthdayMonthIsDisplayed;
 	}
 
 	/**@test13
@@ -320,15 +349,16 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public Boolean selectAnyYearFromYearDropdownAndVerifyYearDropdownIsPrsentOrNot() throws Exception {
+		Boolean selectBirthDayYearIsDisplayed=false;
 		commonEvents.selectByValue(selectBirthDayYear, "1996");
 		try {
 			if(commonEvents.isDisplayed(selectBirthDayYear)) {
-				return true;
+				selectBirthDayYearIsDisplayed= true;
 			}	
 		}catch(Exception e) {
 			throw e;	
 		}
-		return false;
+		return selectBirthDayYearIsDisplayed;
 	}
 
 	/**@test14
@@ -339,15 +369,16 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public Boolean selectCustomRadioButtonAndVerifyCustomRadioButtonIsPrsentOrNot() throws Exception {
+		Boolean customRadioButtonIsDisplayed=false;
 		commonEvents.click(customRadioButton);
 		try {
 			if(commonEvents.isDisplayed(customRadioButton)) {
-				return true;
+				customRadioButtonIsDisplayed= true;
 			}	
 		}catch(Exception e) {
 			throw e;	
 		}
-		return false;
+		return customRadioButtonIsDisplayed;
 	}
 
 	/**@test15
@@ -358,15 +389,16 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public Boolean selectAnyOptionFromYourPronouDropdownAndVerifyYourPronouDropdownIsPrsentOrNot() throws Exception {
+		Boolean selectYourPronounDropdownIsDisplayed=false;
 		commonEvents.selectByVisibleText(selectYourPronounDropdown, "He: \"Wish him a happy birthday!\"");
 		try {
 			if(commonEvents.isDisplayed(selectYourPronounDropdown)) {
-				return true;
+				selectYourPronounDropdownIsDisplayed= true;
 			}	
 		}catch(Exception e) {
 			throw e;	
 		}
-		return false;
+		return selectYourPronounDropdownIsDisplayed;
 	}
 
 	/**@test16
@@ -377,15 +409,16 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public Boolean enterValueInGenderOptionalTextFieldAndValidateGenderOptionalTextFieldIsPresentOrNot(Map<String, String> expectedData) throws Exception {
+		Boolean genderOptionalTextBoxIsDisplayed=false;
 		commonEvents.sendKeys(genderOptionalTextBox,expectedData.get("GenderOptionalValue"));
 		try {
 			if(commonEvents.isDisplayed(genderOptionalTextBox)) {
-				return true;
+				genderOptionalTextBoxIsDisplayed=true;
 			}	
 		}catch(Exception e) {
 			throw e;	
 		}
-		return false;
+		return genderOptionalTextBoxIsDisplayed;
 	}
 
 	/**@test17
@@ -396,15 +429,16 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public Boolean selectFemaleRadioButtonAndVerifyFemaleRadioButtonIsPrsentOrNot() throws Exception {
+		Boolean selectFemaleRadioButtonIsDisplayed=false;
 		commonEvents.click(selectFemaleRadioButton);
 		try {
 			if(commonEvents.isDisplayed(selectFemaleRadioButton)) {
-				return true;
+				selectFemaleRadioButtonIsDisplayed=true;
 			}	
 		}catch(Exception e) {
 			throw e;	
 		}
-		return false;
+		return selectFemaleRadioButtonIsDisplayed;
 	}
 
 	/**@test18
@@ -415,15 +449,16 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public Boolean selectMaleRadioButtonAndVerifyMaleRadioButtonIsPrsentOrNot() throws Exception {
+		Boolean selectMaleRadioButtonIsDisplayed=false;
 		commonEvents.click(selectMaleRadioButton);
 		try {
 			if(commonEvents.isDisplayed(selectMaleRadioButton)) {
-				return true;
+				selectMaleRadioButtonIsDisplayed=true;
 			}	
 		}catch(Exception e) {
 			throw e;	
 		}
-		return false;
+		return selectMaleRadioButtonIsDisplayed;
 	}
 
 	/**@test19
@@ -434,18 +469,19 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public Boolean verifyAllprsenceOfFieldAfterCloseTheSignupPage() throws Exception {
+		Boolean createNewAccountLinkIsDisplayed=false;
 		commonEvents.click(closeSignupPageImage);
 		try {
 			if(commonEvents.isDisplayed(emailAddsPhoneNumberTextbox)&&
 					commonEvents.isDisplayed(passwordTextbox)&&
 					commonEvents.isDisplayed(forgettenPasswordLink)&&
 					commonEvents.isDisplayed(createNewAccountLink)) {
-				return true;
+				createNewAccountLinkIsDisplayed=true;
 			}	
 		}catch(Exception e) {
 			throw e;	
 		}
-		return false;
+		return createNewAccountLinkIsDisplayed;
 	}
 
 	/**@test20
@@ -456,17 +492,16 @@ public class FaceBookPage extends StartupPage {
 	 * @author : Yaksha
 	 */
 	public Boolean enterValidEmail_PasswordInTextFieldAndVerifyLoginButtonIsPresentOrNot(Map<String, String> expectedData) throws Exception {
+		Boolean loginButtonIsDisplay=false;
 		commonEvents.sendKeys(emailAddsPhoneNumberTextbox,expectedData.get("Username"));
 		commonEvents.sendKeys(passwordTextbox,expectedData.get("Password"));
 		try {
 			if(commonEvents.isDisplayed(loginButton)) {
-				return true;
+				loginButtonIsDisplay= true;
 			}	
 		}catch(Exception e) {
 			throw e;	
 		}
-		return false;
+		return loginButtonIsDisplay;
 	}
-
-
 }

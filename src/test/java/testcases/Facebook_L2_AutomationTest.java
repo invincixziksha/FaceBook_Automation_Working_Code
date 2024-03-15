@@ -65,7 +65,9 @@ public class Facebook_L2_AutomationTest  extends AppTestBase
 	@Test(priority = 4, groups = {"sanity"}, description="Upload a profile Picture ")
 	public void clickOnUpdateProfilePictureAndUploadProfilePicture() throws Exception {
 		FaceBookPageInstance = new Facebook_L2_Pages(driver);
-	    Assert.assertTrue(FaceBookPageInstance.clickOnUpdateProfilePicture_and_UploadProfilePicture(null),"Failed to Upload profile picture, please check manually");
+		String expectedDataFilePath = testDataFilePath+"expected_data.json";
+		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "PathOfTheImage");
+		Assert.assertTrue(FaceBookPageInstance.clickOnUpdateProfilePictureAndUploadProfilePicture(expectedData.get("uploadImageFilePath")), "file upload failed, please check manually");	
 		Assert.assertTrue(LocatorsFactoryInstance.editProfileButtonIsPresent(driver).isDisplayed(), "Edit profile button is not present, Please check manually");	
 	}
 	@Test(priority = 5, groups = {"sanity"}, description="click On Edit Profile And fill The Detail In Bio Section")
@@ -73,7 +75,7 @@ public class Facebook_L2_AutomationTest  extends AppTestBase
 		FaceBookPageInstance = new Facebook_L2_Pages(driver);
 		String expectedDataFilePath = testDataFilePath+"expected_data.json";
 		Map<String, String> expectedData1 = new FileOperations().readJson(expectedDataFilePath, "logInCredential");
-	    Assert.assertTrue(FaceBookPageInstance.clickOnEditProfileAndFillTheDetailInBioSection(expectedData1),"Not able to add the bio section, please check manually");
+	    Assert.assertTrue(FaceBookPageInstance.clickOnEditProfileAndFillTheDetaFilInBioSection(expectedData1),"Not able to add the bio section, please check manually");
 		Assert.assertTrue(LocatorsFactoryInstance.addToStoryButtonIsPresent(driver).isDisplayed(), "addToStory Button button is not present, Please check manually");	
 	}
 	@Test(priority = 6, groups = {"sanity"}, description="click On Posts and Go to Intro Section and Add Details In Add Bio")

@@ -14,44 +14,24 @@
       </run>
     </groups>
     <classes>
-      <class name="testcases.Facebook_L1_AutomationTest">
-        <methods>
-          <include name="validateErrorMessageWithoutProvidePassword"/>
-          <include name="initBrowser"/>
-          <include name="enterFirstNameInFirstNameTextFieldOfTheSignupPage"/>
-          <include name="selectAnyDateFromDateDropdownAndVerifyDateDropdownIsPrsentOrNot"/>
-          <include name="enterValidEmail_PasswordInTextFieldAndVerifyLoginButtonIsPresentOrNot"/>
-          <include name="selectFemaleRadioButtonAndVerifyFemaleRadioButtonIsPrsentOrNot"/>
-          <include name="selectCustomRadioButtonAndVerifyCustomRadioButtonIsPrsentOrNot"/>
-          <include name="verifyAllFieldsArePresentInTheSignUpPage"/>
-          <include name="goBackToLogInPageAndValidateCreateNewAccountButtonIsPresentOrNot"/>
-          <include name="selectAnyYearFromYearDropdownAndVerifyYearDropdownIsPrsentOrNot"/>
-          <include name="enterValueInSignupPage"/>
-          <include name="verifyAllprsenceOfFieldAfterCloseTheSignupPage"/>
-          <include name="selectAnyMonthFromMonthDropdownAndVerifyMonthDropdownIsPrsentOrNot"/>
-          <include name="enterValueInGenderOptionalTextFieldAndValidateGenderOptionalTextFieldIsPresentOrNot"/>
-          <include name="validateErrorMessageWithoutProvideEmailOrPhoneNumber"/>
-          <include name="selectAnyOptionFromYourPronouDropdownAndVerifyYourPronouDropdownIsPrsentOrNot"/>
-          <include name="click_on_forgetten_account_link_then_validate_Email_adddress_Or_phone_number_field"/>
-          <include name="tearDown"/>
-          <include name="selectMaleRadioButtonAndVerifyFemaleRadioButtonIsPrsentOrNot"/>
-        </methods>
-      </class> <!-- testcases.Facebook_L1_AutomationTest -->
       <class name="testcases.Facebook_L2_AutomationTest">
         <methods>
-          <include name="clickOnEditProfileandillTheDetailInBioSection"/>
-          <include name="initBrowser"/>
           <include name="clickOnAboutAndGoIntoOverviewAndAddUniversity"/>
-          <include name="goToThePreviousPageAndClickOnAccount"/>
+          <include name="clickOnProfileAndValidateTheProfileName"/>
           <include name="clickOnAddRelationshipStatusAndAddRelationshipStatusAsSingle"/>
           <include name="clickOnAddWorkplaceAndAddCompanyName"/>
-          <include name="clickOnLogoutButton"/>
-          <include name="clickOnUpdateProfilePictureAndUploadProfilePicture"/>
-          <include name="clickOnAddHomeTownAndAddHomeTown"/>
-          <include name="clickOnAddSecondarySchoolAndAddSchool"/>
           <include name="clickOnAddCurrentCityAndAddCurrentCity"/>
           <include name="clickOnPostsAndGoToIntroSectionAndAddDetailsInAddBio"/>
           <include name="tearDown"/>
+          <include name="afterLoggedInValidateTheTitleOfFacebookHomePage"/>
+          <include name="clickOnEditProfileandillTheDetailInBioSection"/>
+          <include name="initBrowser"/>
+          <include name="goToThePreviousPageAndClickOnAccount"/>
+          <include name="loginTheFacebookByGivenValidCredetial"/>
+          <include name="clickOnLogoutButton"/>
+          <include name="clickOnAddHomeTownAndAddHomeTown"/>
+          <include name="clickOnUpdateProfilePictureAndUploadProfilePicture"/>
+          <include name="clickOnAddSecondarySchoolAndAddSchool"/>
         </methods>
       </class> <!-- testcases.Facebook_L2_AutomationTest -->
     </classes>

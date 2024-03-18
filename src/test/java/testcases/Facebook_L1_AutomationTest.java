@@ -60,7 +60,7 @@ public class Facebook_L1_AutomationTest extends AppTestBase {
 	public void validateErrorMessageWithoutProvideAnyCredentials() throws Exception {
 		FaceBookPageInstance = new Facebook_L1_Pages(driver);
 		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "errorMessage");
-		Assert.assertEquals(FaceBookPageInstance.validateErrorMessageWithoutProvideAnyCredentials(), expectedData.get("errorMessageText"), "error message is not matching, please check manually");
+		Assert.assertEquals(FaceBookPageInstance.validateErrorMessageWithoutProvideAnyCredentials(), expectedData.get("errorMessageText2"), "error message is not matching, please check manually");
 		Assert.assertTrue(LocatorsFactoryInstance.emailTextField(driver).isDisplayed(), "Email Text Field is not present in the current page, Please check manually");
 	}
 	
@@ -70,7 +70,7 @@ public class Facebook_L1_AutomationTest extends AppTestBase {
 		String expectedDataFilePath = testDataFilePath+"expected_data.json";
 		Map<String, String> expectedData1 = new FileOperations().readJson(expectedDataFilePath, "EmailOrPhoneNumber");
 		FaceBookPageInstance.enterEmailIdOrPhoneNumberInLoginPage(expectedData1);
-		Map<String, String> expectedData2 = new FileOperations().readJson(expectedDataFilePath, "errorMessage1");
+		Map<String, String> expectedData2 = new FileOperations().readJson(expectedDataFilePath, "errorMessages");
 		Assert.assertTrue(FaceBookPageInstance.validateErrorMessageWithoutProvidePassword(expectedData2).contains(expectedData2.get("errorMessageText")), "Error message is not matching, please check manually");
 		Assert.assertTrue(LocatorsFactoryInstance.getPasswordTextfield(driver).isDisplayed(), "Password Text Field is not present in the current page, Please check manually");
 	}
@@ -82,7 +82,7 @@ public class Facebook_L1_AutomationTest extends AppTestBase {
 		Map<String, String> expectedData1 = new FileOperations().readJson(expectedDataFilePath, "password");
 		FaceBookPageInstance.enterPasswordInLoginPage(expectedData1);
 		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "errorMessage");
-		Assert.assertEquals(FaceBookPageInstance.validateErrorMessageWithoutProvideEmailOrPhoneNumber(), expectedData.get("errorMessageText"), "error message is not matching, please check manually");
+		Assert.assertEquals(FaceBookPageInstance.validateErrorMessageWithoutProvideEmailOrPhoneNumber(), expectedData.get("errorMessageText1"), "error message is not matching, please check manually");
 		Assert.assertTrue(LocatorsFactoryInstance.emailTextField(driver).isDisplayed(), "Email Text Field is not present in the current page, Please check manually");
 	}
 	

@@ -18,8 +18,11 @@ public class Facebook_L1_Pages extends StartupPage {
 	By createNewAccountLink = By.xpath("//a[contains(text() , 'Create new account')]"); 
 	By emailTextField = By.id("email"); 
 	By errorMessageWithoutCredential = By.xpath("//div[@id='email_container']//div[2]"); 
+	By errorMessageWithoutCredential1 = By.xpath("//div[.='Invalid username or password']"); 
 	By errorMessageWithoutCredentialForgetPassword = By.xpath("//div[@id='email_container']//div[2]/a"); 
 	By withoutPasswordErrorMessage = By.xpath("//div[contains(@class, 'clearfix') and contains(@class, 'mg')]//div[2]");
+	By withoutPasswordErrorMessage1 = By.xpath("//div[.='Invalid username or password']");
+
 
 	By createNewAccount = By.xpath("//a[contains(text(),'Create new account')]"); 
 	By signUpButton = By.xpath("//button[@name=\"websubmit\"]"); 
@@ -99,14 +102,28 @@ public class Facebook_L1_Pages extends StartupPage {
 	 */
 	public String validateErrorMessageWithoutProvideAnyCredentials() throws Exception {
 		String errorMessageWithoutCredentials="";
+		String errorMessage="";
+		commonEvents.click(loginButton);
+		commonEvents.waitTillElementLocated(emailTextField, 60);
+
 		try {
-			commonEvents.click(loginButton);
-			commonEvents.waitTillElementLocated(emailTextField, 60);
-			 errorMessageWithoutCredentials =  commonEvents.getText(errorMessageWithoutCredential) + commonEvents.getText(errorMessageWithoutCredentialForgetPassword);
+			if(commonEvents.isDisplayed(errorMessageWithoutCredential))
+			{
+				errorMessageWithoutCredentials =  commonEvents.getText(errorMessageWithoutCredential) + commonEvents.getText(errorMessageWithoutCredentialForgetPassword);
+				System.out.println("Error message is :" +errorMessageWithoutCredentials);
+				return errorMessageWithoutCredentials;
+			}
+			else 
+			{
+				errorMessage=commonEvents.getText(errorMessageWithoutCredential1);
+				System.out.println("Error message is :" +errorMessage);
+				return errorMessage;
+			}
+			
 		}catch(Exception e) {
+			System.out.println("No element found");
 			throw e;
 		}
-		return errorMessageWithoutCredentials ;
 	}
 
 	/**
@@ -139,15 +156,25 @@ public class Facebook_L1_Pages extends StartupPage {
 	 */
 	public String validateErrorMessageWithoutProvidePassword(Map<String, String> expectedData) throws Exception {
 		String errorMessageWithoutPassword="";
+		String errorMessage="";
 		try {
 			commonEvents.click(loginButton);
 			commonEvents.waitTillElementLocated(passwordTextbox, 60);
+			if(commonEvents.isDisplayed(withoutPasswordErrorMessage))
+			{
 			errorMessageWithoutPassword =  commonEvents.getText(withoutPasswordErrorMessage);
 			System.out.println("Error Message : " + errorMessageWithoutPassword);
+			return errorMessageWithoutPassword;
+			}
+			else
+			{
+				errorMessage=commonEvents.getText(withoutPasswordErrorMessage1);
+				System.out.println("Error message is :" +errorMessage);
+				return errorMessage;
+			}
 		}catch(Exception e) {
 			throw e;
 		}
-		return errorMessageWithoutPassword ;
 	}
 
 	/**
@@ -181,14 +208,25 @@ public class Facebook_L1_Pages extends StartupPage {
 	 */
 	public String validateErrorMessageWithoutProvideEmailOrPhoneNumber() throws Exception {
 		String errorMessageWithoutCredentials="";
+		String errorMessage="";
 		try {
 			commonEvents.click(loginButton);
 			commonEvents.waitTillElementLocated(emailTextField, 60);
-			errorMessageWithoutCredentials =  commonEvents.getText(errorMessageWithoutCredential) + commonEvents.getText(errorMessageWithoutCredentialForgetPassword);
+			if(commonEvents.isDisplayed(errorMessageWithoutCredential))
+			{
+				errorMessageWithoutCredentials =  commonEvents.getText(errorMessageWithoutCredential);
+				System.out.println("Error message is:"+errorMessageWithoutCredentials);
+				return errorMessageWithoutCredentials ;
+			}
+			else
+			{
+			errorMessage =  commonEvents.getText(errorMessageWithoutCredential1);
+			System.out.println("Error message is:"+errorMessageWithoutCredentials);
+			return errorMessage;
+			}
 		}catch(Exception e) {
 			throw e;
 		}
-		return errorMessageWithoutCredentials ;
 	}
 
 	/**@test6

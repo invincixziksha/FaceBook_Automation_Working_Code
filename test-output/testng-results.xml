@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+<testng-results ignored="0" total="20" passed="20" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-15T17:41:57 IST" name="Suite" finished-at="2024-03-15T17:43:25 IST" duration-ms="88564">
+  <suite started-at="2024-03-18T17:13:54 IST" name="Suite" finished-at="2024-03-18T17:14:28 IST" duration-ms="34247">
     <groups>
       <group name="sanity">
-        <method signature="Facebook_L2_AutomationTest.loginTheFacebookByGivenValidCredetial()[pri:1, instance:testcases.Facebook_L2_AutomationTest@757f675c]" name="loginTheFacebookByGivenValidCredetial" class="testcases.Facebook_L2_AutomationTest"/>
-        <method signature="Facebook_L2_AutomationTest.afterLoggedInValidateTheTitleOfFacebookHomePage()[pri:2, instance:testcases.Facebook_L2_AutomationTest@757f675c]" name="afterLoggedInValidateTheTitleOfFacebookHomePage" class="testcases.Facebook_L2_AutomationTest"/>
-        <method signature="Facebook_L2_AutomationTest.clickOnProfileAndValidateTheProfileName()[pri:3, instance:testcases.Facebook_L2_AutomationTest@757f675c]" name="clickOnProfileAndValidateTheProfileName" class="testcases.Facebook_L2_AutomationTest"/>
-        <method signature="Facebook_L2_AutomationTest.clickOnUpdateProfilePictureAndUploadProfilePicture()[pri:4, instance:testcases.Facebook_L2_AutomationTest@757f675c]" name="clickOnUpdateProfilePictureAndUploadProfilePicture" class="testcases.Facebook_L2_AutomationTest"/>
-        <method signature="Facebook_L2_AutomationTest.clickOnEditProfileandillTheDetailInBioSection()[pri:5, instance:testcases.Facebook_L2_AutomationTest@757f675c]" name="clickOnEditProfileandillTheDetailInBioSection" class="testcases.Facebook_L2_AutomationTest"/>
-        <method signature="Facebook_L2_AutomationTest.clickOnPostsAndGoToIntroSectionAndAddDetailsInAddBio()[pri:6, instance:testcases.Facebook_L2_AutomationTest@757f675c]" name="clickOnPostsAndGoToIntroSectionAndAddDetailsInAddBio" class="testcases.Facebook_L2_AutomationTest"/>
-        <method signature="Facebook_L2_AutomationTest.clickOnAboutAndGoIntoOverviewAndAddUniversity()[pri:7, instance:testcases.Facebook_L2_AutomationTest@757f675c]" name="clickOnAboutAndGoIntoOverviewAndAddUniversity" class="testcases.Facebook_L2_AutomationTest"/>
-        <method signature="Facebook_L2_AutomationTest.clickOnAddWorkplaceAndAddCompanyName()[pri:8, instance:testcases.Facebook_L2_AutomationTest@757f675c]" name="clickOnAddWorkplaceAndAddCompanyName" class="testcases.Facebook_L2_AutomationTest"/>
-        <method signature="Facebook_L2_AutomationTest.clickOnAddHomeTownAndAddHomeTown()[pri:9, instance:testcases.Facebook_L2_AutomationTest@757f675c]" name="clickOnAddHomeTownAndAddHomeTown" class="testcases.Facebook_L2_AutomationTest"/>
-        <method signature="Facebook_L2_AutomationTest.clickOnAddCurrentCityAndAddCurrentCity()[pri:10, instance:testcases.Facebook_L2_AutomationTest@757f675c]" name="clickOnAddCurrentCityAndAddCurrentCity" class="testcases.Facebook_L2_AutomationTest"/>
-        <method signature="Facebook_L2_AutomationTest.clickOnAddSecondarySchoolAndAddSchool()[pri:11, instance:testcases.Facebook_L2_AutomationTest@757f675c]" name="clickOnAddSecondarySchoolAndAddSchool" class="testcases.Facebook_L2_AutomationTest"/>
-        <method signature="Facebook_L2_AutomationTest.clickOnAddRelationshipStatusAndAddRelationshipStatusAsSingle()[pri:12, instance:testcases.Facebook_L2_AutomationTest@757f675c]" name="clickOnAddRelationshipStatusAndAddRelationshipStatusAsSingle" class="testcases.Facebook_L2_AutomationTest"/>
-        <method signature="Facebook_L2_AutomationTest.goToThePreviousPageAndClickOnAccount()[pri:13, instance:testcases.Facebook_L2_AutomationTest@757f675c]" name="goToThePreviousPageAndClickOnAccount" class="testcases.Facebook_L2_AutomationTest"/>
-        <method signature="Facebook_L2_AutomationTest.clickOnLogoutButton()[pri:14, instance:testcases.Facebook_L2_AutomationTest@757f675c]" name="clickOnLogoutButton" class="testcases.Facebook_L2_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.validateFacebookTitleofLoginPage()[pri:1, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="validateFacebookTitleofLoginPage" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.verifyPresenceOfAllFieldsinTheLoginPage()[pri:2, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="verifyPresenceOfAllFieldsinTheLoginPage" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.validateErrorMessageWithoutProvideAnyCredentials()[pri:3, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="validateErrorMessageWithoutProvideAnyCredentials" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.validateErrorMessageWithoutProvidePassword()[pri:4, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="validateErrorMessageWithoutProvidePassword" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.validateErrorMessageWithoutProvideEmailOrPhoneNumber()[pri:5, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="validateErrorMessageWithoutProvideEmailOrPhoneNumber" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.goBackToLogInPageAndValidateCreateNewAccountButtonIsPresentOrNot()[pri:6, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="goBackToLogInPageAndValidateCreateNewAccountButtonIsPresentOrNot" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.click_on_forgetten_account_link_then_validate_Email_adddress_Or_phone_number_field()[pri:7, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="click_on_forgetten_account_link_then_validate_Email_adddress_Or_phone_number_field" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.verifyAllFieldsArePresentInTheSignUpPage()[pri:8, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="verifyAllFieldsArePresentInTheSignUpPage" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.enterFirstNameInFirstNameTextFieldOfTheSignupPage()[pri:9, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="enterFirstNameInFirstNameTextFieldOfTheSignupPage" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.enterValueInSignupPage()[pri:10, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="enterValueInSignupPage" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.selectAnyDateFromDateDropdownAndVerifyDateDropdownIsPrsentOrNot()[pri:11, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="selectAnyDateFromDateDropdownAndVerifyDateDropdownIsPrsentOrNot" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.selectAnyMonthFromMonthDropdownAndVerifyMonthDropdownIsPrsentOrNot()[pri:12, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="selectAnyMonthFromMonthDropdownAndVerifyMonthDropdownIsPrsentOrNot" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.selectAnyYearFromYearDropdownAndVerifyYearDropdownIsPrsentOrNot()[pri:13, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="selectAnyYearFromYearDropdownAndVerifyYearDropdownIsPrsentOrNot" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.selectCustomRadioButtonAndVerifyCustomRadioButtonIsPrsentOrNot()[pri:14, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="selectCustomRadioButtonAndVerifyCustomRadioButtonIsPrsentOrNot" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.selectAnyOptionFromYourPronouDropdownAndVerifyYourPronouDropdownIsPrsentOrNot()[pri:15, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="selectAnyOptionFromYourPronouDropdownAndVerifyYourPronouDropdownIsPrsentOrNot" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.enterValueInGenderOptionalTextFieldAndValidateGenderOptionalTextFieldIsPresentOrNot()[pri:16, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="enterValueInGenderOptionalTextFieldAndValidateGenderOptionalTextFieldIsPresentOrNot" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.selectFemaleRadioButtonAndVerifyFemaleRadioButtonIsPrsentOrNot()[pri:17, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="selectFemaleRadioButtonAndVerifyFemaleRadioButtonIsPrsentOrNot" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.selectMaleRadioButtonAndVerifyFemaleRadioButtonIsPrsentOrNot()[pri:18, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="selectMaleRadioButtonAndVerifyFemaleRadioButtonIsPrsentOrNot" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.verifyAllprsenceOfFieldAfterCloseTheSignupPage()[pri:19, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="verifyAllprsenceOfFieldAfterCloseTheSignupPage" class="testcases.Facebook_L1_AutomationTest"/>
+        <method signature="Facebook_L1_AutomationTest.enterValidEmail_PasswordInTextFieldAndVerifyLoginButtonIsPresentOrNot()[pri:20, instance:testcases.Facebook_L1_AutomationTest@7555b920]" name="enterValidEmail_PasswordInTextFieldAndVerifyLoginButtonIsPresentOrNot" class="testcases.Facebook_L1_AutomationTest"/>
       </group> <!-- sanity -->
     </groups>
-    <test started-at="2024-03-15T17:41:57 IST" name="Test" finished-at="2024-03-15T17:43:25 IST" duration-ms="88564">
-      <class name="testcases.Facebook_L2_AutomationTest">
-        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:41:57 IST" name="initBrowser" finished-at="2024-03-15T17:42:03 IST" duration-ms="5922" status="PASS">
+    <test started-at="2024-03-18T17:13:54 IST" name="Test" finished-at="2024-03-18T17:14:28 IST" duration-ms="34247">
+      <class name="testcases.Facebook_L1_AutomationTest">
+        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:13:54 IST" name="initBrowser" finished-at="2024-03-18T17:14:00 IST" duration-ms="6848" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,67 +45,91 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method signature="loginTheFacebookByGivenValidCredetial()[pri:1, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:42:03 IST" name="loginTheFacebookByGivenValidCredetial" description="login the facebook by given valid credetial" finished-at="2024-03-15T17:42:11 IST" duration-ms="8703" status="PASS">
+        <test-method signature="validateFacebookTitleofLoginPage()[pri:1, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:00 IST" name="validateFacebookTitleofLoginPage" description="Navigate to the URL and Validate the fa LogIn Page Title" finished-at="2024-03-18T17:14:00 IST" duration-ms="70" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTheFacebookByGivenValidCredetial -->
-        <test-method signature="afterLoggedInValidateTheTitleOfFacebookHomePage()[pri:2, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:42:12 IST" name="afterLoggedInValidateTheTitleOfFacebookHomePage" description="after Logged In, Validate the title of Facebook Home Page" finished-at="2024-03-15T17:42:12 IST" duration-ms="427" status="PASS">
+        </test-method> <!-- validateFacebookTitleofLoginPage -->
+        <test-method signature="verifyPresenceOfAllFieldsinTheLoginPage()[pri:2, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:00 IST" name="verifyPresenceOfAllFieldsinTheLoginPage" description="verify Presence Of All Fields in The Login Page" finished-at="2024-03-18T17:14:01 IST" duration-ms="227" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterLoggedInValidateTheTitleOfFacebookHomePage -->
-        <test-method signature="clickOnProfileAndValidateTheProfileName()[pri:3, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:42:12 IST" name="clickOnProfileAndValidateTheProfileName" description="ClickOn Profile Icon and Validate the Profile Name" finished-at="2024-03-15T17:42:14 IST" duration-ms="1842" status="PASS">
+        </test-method> <!-- verifyPresenceOfAllFieldsinTheLoginPage -->
+        <test-method signature="validateErrorMessageWithoutProvideAnyCredentials()[pri:3, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:01 IST" name="validateErrorMessageWithoutProvideAnyCredentials" description="validate the error message, when user does not provide any credentials" finished-at="2024-03-18T17:14:03 IST" duration-ms="1999" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnProfileAndValidateTheProfileName -->
-        <test-method signature="clickOnUpdateProfilePictureAndUploadProfilePicture()[pri:4, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:42:14 IST" name="clickOnUpdateProfilePictureAndUploadProfilePicture" description="Upload a profile Picture " finished-at="2024-03-15T17:42:29 IST" duration-ms="15439" status="PASS">
+        </test-method> <!-- validateErrorMessageWithoutProvideAnyCredentials -->
+        <test-method signature="validateErrorMessageWithoutProvidePassword()[pri:4, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:03 IST" name="validateErrorMessageWithoutProvidePassword" description="Enter Email or Phone No in Email or Phone No Text field and click on Login and validate Error Message" finished-at="2024-03-18T17:14:14 IST" duration-ms="10838" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnUpdateProfilePictureAndUploadProfilePicture -->
-        <test-method signature="clickOnEditProfileandillTheDetailInBioSection()[pri:5, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:42:29 IST" name="clickOnEditProfileandillTheDetailInBioSection" description="click On Edit Profile And fill The Detail In Bio Section" finished-at="2024-03-15T17:42:39 IST" duration-ms="9476" status="PASS">
+        </test-method> <!-- validateErrorMessageWithoutProvidePassword -->
+        <test-method signature="validateErrorMessageWithoutProvideEmailOrPhoneNumber()[pri:5, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:14 IST" name="validateErrorMessageWithoutProvideEmailOrPhoneNumber" description="Enter Password in password Text field and click on Login and validate Error Message" finished-at="2024-03-18T17:14:16 IST" duration-ms="2552" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnEditProfileandillTheDetailInBioSection -->
-        <test-method signature="clickOnPostsAndGoToIntroSectionAndAddDetailsInAddBio()[pri:6, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:42:39 IST" name="clickOnPostsAndGoToIntroSectionAndAddDetailsInAddBio" description="click On Posts and Go to Intro Section and Add Details In Add Bio" finished-at="2024-03-15T17:42:44 IST" duration-ms="5474" status="PASS">
+        </test-method> <!-- validateErrorMessageWithoutProvideEmailOrPhoneNumber -->
+        <test-method signature="goBackToLogInPageAndValidateCreateNewAccountButtonIsPresentOrNot()[pri:6, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:16 IST" name="goBackToLogInPageAndValidateCreateNewAccountButtonIsPresentOrNot" description="Go Back To LogIn Page And Validate CreateNewAccount button Is Present or not" finished-at="2024-03-18T17:14:23 IST" duration-ms="6616" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnPostsAndGoToIntroSectionAndAddDetailsInAddBio -->
-        <test-method signature="clickOnAboutAndGoIntoOverviewAndAddUniversity()[pri:7, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:42:44 IST" name="clickOnAboutAndGoIntoOverviewAndAddUniversity" description="click On About and Go Into overview and Education and add university" finished-at="2024-03-15T17:42:46 IST" duration-ms="1758" status="PASS">
+        </test-method> <!-- goBackToLogInPageAndValidateCreateNewAccountButtonIsPresentOrNot -->
+        <test-method signature="click_on_forgetten_account_link_then_validate_Email_adddress_Or_phone_number_field()[pri:7, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:23 IST" name="click_on_forgetten_account_link_then_validate_Email_adddress_Or_phone_number_field" description="Click on Create Account Button and Verify nevigate to the signUp page." finished-at="2024-03-18T17:14:24 IST" duration-ms="1384" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnAboutAndGoIntoOverviewAndAddUniversity -->
-        <test-method signature="clickOnAddWorkplaceAndAddCompanyName()[pri:8, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:42:46 IST" name="clickOnAddWorkplaceAndAddCompanyName" description="Click on add a workplace and add company name" finished-at="2024-03-15T17:42:47 IST" duration-ms="990" status="PASS">
+        </test-method> <!-- click_on_forgetten_account_link_then_validate_Email_adddress_Or_phone_number_field -->
+        <test-method signature="verifyAllFieldsArePresentInTheSignUpPage()[pri:8, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:24 IST" name="verifyAllFieldsArePresentInTheSignUpPage" description="verify first name,surname,Mobile Number email address,New password field are present in the signup page." finished-at="2024-03-18T17:14:24 IST" duration-ms="228" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnAddWorkplaceAndAddCompanyName -->
-        <test-method signature="clickOnAddHomeTownAndAddHomeTown()[pri:9, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:42:47 IST" name="clickOnAddHomeTownAndAddHomeTown" description="Click on add home town and add home town" finished-at="2024-03-15T17:42:56 IST" duration-ms="8989" status="PASS">
+        </test-method> <!-- verifyAllFieldsArePresentInTheSignUpPage -->
+        <test-method signature="enterFirstNameInFirstNameTextFieldOfTheSignupPage()[pri:9, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:24 IST" name="enterFirstNameInFirstNameTextFieldOfTheSignupPage" description="Enter data in the first name field" finished-at="2024-03-18T17:14:24 IST" duration-ms="128" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnAddHomeTownAndAddHomeTown -->
-        <test-method signature="clickOnAddCurrentCityAndAddCurrentCity()[pri:10, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:42:56 IST" name="clickOnAddCurrentCityAndAddCurrentCity" description="Click on add a current city and add current city" finished-at="2024-03-15T17:43:04 IST" duration-ms="8561" status="PASS">
+        </test-method> <!-- enterFirstNameInFirstNameTextFieldOfTheSignupPage -->
+        <test-method signature="enterValueInSignupPage()[pri:10, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:24 IST" name="enterValueInSignupPage" description="Enter data (Read the data from Json File)in the surname,Mobile Number email address,New password field." finished-at="2024-03-18T17:14:25 IST" duration-ms="393" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnAddCurrentCityAndAddCurrentCity -->
-        <test-method signature="clickOnAddSecondarySchoolAndAddSchool()[pri:11, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:43:04 IST" name="clickOnAddSecondarySchoolAndAddSchool" description="Click on Add secondary school and add school" finished-at="2024-03-15T17:43:13 IST" duration-ms="8392" status="PASS">
+        </test-method> <!-- enterValueInSignupPage -->
+        <test-method signature="selectAnyDateFromDateDropdownAndVerifyDateDropdownIsPrsentOrNot()[pri:11, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:25 IST" name="selectAnyDateFromDateDropdownAndVerifyDateDropdownIsPrsentOrNot" description="Select any date from date dropdown field and and verify the date dropdown is present or not" finished-at="2024-03-18T17:14:25 IST" duration-ms="164" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnAddSecondarySchoolAndAddSchool -->
-        <test-method signature="clickOnAddRelationshipStatusAndAddRelationshipStatusAsSingle()[pri:12, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:43:13 IST" name="clickOnAddRelationshipStatusAndAddRelationshipStatusAsSingle" description="Click on add relationship status and add relationship status as single" finished-at="2024-03-15T17:43:22 IST" duration-ms="8682" status="PASS">
+        </test-method> <!-- selectAnyDateFromDateDropdownAndVerifyDateDropdownIsPrsentOrNot -->
+        <test-method signature="selectAnyMonthFromMonthDropdownAndVerifyMonthDropdownIsPrsentOrNot()[pri:12, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:25 IST" name="selectAnyMonthFromMonthDropdownAndVerifyMonthDropdownIsPrsentOrNot" description="Select any Month from month dropdown field and and verify the Month dropdown is present or not" finished-at="2024-03-18T17:14:25 IST" duration-ms="146" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnAddRelationshipStatusAndAddRelationshipStatusAsSingle -->
-        <test-method signature="goToThePreviousPageAndClickOnAccount()[pri:13, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:43:22 IST" name="goToThePreviousPageAndClickOnAccount" description="Go to the previous page and click on Account at the right top corner" finished-at="2024-03-15T17:43:23 IST" duration-ms="1123" status="PASS">
+        </test-method> <!-- selectAnyMonthFromMonthDropdownAndVerifyMonthDropdownIsPrsentOrNot -->
+        <test-method signature="selectAnyYearFromYearDropdownAndVerifyYearDropdownIsPrsentOrNot()[pri:13, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:25 IST" name="selectAnyYearFromYearDropdownAndVerifyYearDropdownIsPrsentOrNot" description="Select any Year from the Year dropdown field and and verify the Year dropdown is present or not" finished-at="2024-03-18T17:14:25 IST" duration-ms="146" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToThePreviousPageAndClickOnAccount -->
-        <test-method signature="clickOnLogoutButton()[pri:14, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:43:23 IST" name="clickOnLogoutButton" description="After that click on logout button" finished-at="2024-03-15T17:43:25 IST" duration-ms="2251" status="PASS">
+        </test-method> <!-- selectAnyYearFromYearDropdownAndVerifyYearDropdownIsPrsentOrNot -->
+        <test-method signature="selectCustomRadioButtonAndVerifyCustomRadioButtonIsPrsentOrNot()[pri:14, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:25 IST" name="selectCustomRadioButtonAndVerifyCustomRadioButtonIsPrsentOrNot" description="select &quot;Custom&quot; radio button and validate &quot;Custom&quot; radio button is present or not" finished-at="2024-03-18T17:14:25 IST" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnLogoutButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Facebook_L2_AutomationTest@757f675c]" started-at="2024-03-15T17:43:25 IST" name="tearDown" finished-at="2024-03-15T17:43:25 IST" duration-ms="421" status="PASS">
+        </test-method> <!-- selectCustomRadioButtonAndVerifyCustomRadioButtonIsPrsentOrNot -->
+        <test-method signature="selectAnyOptionFromYourPronouDropdownAndVerifyYourPronouDropdownIsPrsentOrNot()[pri:15, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:25 IST" name="selectAnyOptionFromYourPronouDropdownAndVerifyYourPronouDropdownIsPrsentOrNot" description="select any option from the &quot;Select your pronoun&quot; dropdown and verify &quot;Select your pronoun&quot; dropdown&quot; is present or not" finished-at="2024-03-18T17:14:26 IST" duration-ms="134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectAnyOptionFromYourPronouDropdownAndVerifyYourPronouDropdownIsPrsentOrNot -->
+        <test-method signature="enterValueInGenderOptionalTextFieldAndValidateGenderOptionalTextFieldIsPresentOrNot()[pri:16, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:26 IST" name="enterValueInGenderOptionalTextFieldAndValidateGenderOptionalTextFieldIsPresentOrNot" description="Enter Value in &quot;Gender Optional&quot; Textfield and verify &quot;Gender Optional&quot; Textfield is present or not" finished-at="2024-03-18T17:14:26 IST" duration-ms="210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterValueInGenderOptionalTextFieldAndValidateGenderOptionalTextFieldIsPresentOrNot -->
+        <test-method signature="selectFemaleRadioButtonAndVerifyFemaleRadioButtonIsPrsentOrNot()[pri:17, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:26 IST" name="selectFemaleRadioButtonAndVerifyFemaleRadioButtonIsPrsentOrNot" description="select &quot;Female&quot; radio button and validate &quot;Female&quot; radio button is present or not" finished-at="2024-03-18T17:14:26 IST" duration-ms="118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectFemaleRadioButtonAndVerifyFemaleRadioButtonIsPrsentOrNot -->
+        <test-method signature="selectMaleRadioButtonAndVerifyFemaleRadioButtonIsPrsentOrNot()[pri:18, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:26 IST" name="selectMaleRadioButtonAndVerifyFemaleRadioButtonIsPrsentOrNot" description="select &quot;Male&quot; radio button and validate &quot;Male&quot; radio button is present or not" finished-at="2024-03-18T17:14:26 IST" duration-ms="104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectMaleRadioButtonAndVerifyFemaleRadioButtonIsPrsentOrNot -->
+        <test-method signature="verifyAllprsenceOfFieldAfterCloseTheSignupPage()[pri:19, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:26 IST" name="verifyAllprsenceOfFieldAfterCloseTheSignupPage" description="close the &quot;signup&quot; page and verify the All Fields prsense in The Login Page or not" finished-at="2024-03-18T17:14:26 IST" duration-ms="282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAllprsenceOfFieldAfterCloseTheSignupPage -->
+        <test-method signature="enterValidEmail_PasswordInTextFieldAndVerifyLoginButtonIsPresentOrNot()[pri:20, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:26 IST" name="enterValidEmail_PasswordInTextFieldAndVerifyLoginButtonIsPresentOrNot" description="Enter valid email or phone no in  email or phone no text field and enter password in password textfield and validate &quot;login&quot; button is present or not" finished-at="2024-03-18T17:14:27 IST" duration-ms="265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterValidEmail_PasswordInTextFieldAndVerifyLoginButtonIsPresentOrNot -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.Facebook_L1_AutomationTest@7555b920]" started-at="2024-03-18T17:14:27 IST" name="tearDown" finished-at="2024-03-18T17:14:28 IST" duration-ms="1180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testcases.Facebook_L2_AutomationTest -->
+      </class> <!-- testcases.Facebook_L1_AutomationTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

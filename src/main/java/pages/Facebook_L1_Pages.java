@@ -109,7 +109,7 @@ public class Facebook_L1_Pages extends StartupPage {
 		try {
 			if(commonEvents.isDisplayed(errorMessageWithoutCredential))
 			{
-				errorMessageWithoutCredentials =  commonEvents.getText(errorMessageWithoutCredential) + commonEvents.getText(errorMessageWithoutCredentialForgetPassword);
+				errorMessageWithoutCredentials =  commonEvents.getText(errorMessageWithoutCredential);
 				System.out.println("Error message is :" +errorMessageWithoutCredentials);
 				return errorMessageWithoutCredentials;
 			}
@@ -163,7 +163,7 @@ public class Facebook_L1_Pages extends StartupPage {
 			if(commonEvents.isDisplayed(withoutPasswordErrorMessage))
 			{
 			errorMessageWithoutPassword =  commonEvents.getText(withoutPasswordErrorMessage);
-			System.out.println("Error Message : " + errorMessageWithoutPassword);
+//			System.out.println("Error Message : " + errorMessageWithoutPassword);
 			return errorMessageWithoutPassword;
 			}
 			else

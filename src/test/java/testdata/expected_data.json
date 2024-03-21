@@ -83,9 +83,5 @@
 		"hometown_textfield":"Test",
 		"current_city":"Test",
 		"Secondary_School":"Test Public school"
-	},
-	"PathOfTheImage":{
-		"imagePath":"\\testImage\\uploadImage.png",
-		"uploadImageFilePath":"c:\\Ziksha_Automation_Workspace\\FaceBook_Automation_Working_Code\\testImage\\uploadImage.png"
 	}
 }

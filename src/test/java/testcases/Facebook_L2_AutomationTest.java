@@ -62,12 +62,11 @@ public class Facebook_L2_AutomationTest  extends AppTestBase
 		Assert.assertEquals(FaceBookPageInstance.clickonProfileAndValidateTheProfileName(), expectedData.get("ProfileName"));
 		Assert.assertTrue(LocatorsFactoryInstance.editProfileButtonIsPresent(driver).isDisplayed(), "Edit profile button is not present, Please check manually");	
 	}
+	
 	@Test(priority = 24, groups = {"sanity"}, description="Upload a profile Picture ")
 	public void clickOnUpdateProfilePictureAndUploadProfilePicture() throws Exception {
 		FaceBookPageInstance = new Facebook_L2_Pages(driver);
-		String expectedDataFilePath = testDataFilePath+"expected_data.json";
-		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "PathOfTheImage");
-		Assert.assertTrue(FaceBookPageInstance.clickOnUpdateProfilePictureAndUploadProfilePicture(expectedData.get("uploadImageFilePath")), "file upload failed, please check manually");	
+		Assert.assertTrue(FaceBookPageInstance.clickOnUpdateProfilePictureAndUploadProfilePicture(System.getProperty("user.dir") + "\\testImage\\uploadImage.png"), "file upload failed, please check manually");
 		Assert.assertTrue(LocatorsFactoryInstance.editProfileButtonIsPresent(driver).isDisplayed(), "Edit profile button is not present, Please check manually");	
 	}
 	@Test(priority = 25, groups = {"sanity"}, description="click On Edit Profile And fill The Detail In Bio Section")
